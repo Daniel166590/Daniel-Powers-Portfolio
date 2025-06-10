@@ -1,37 +1,81 @@
 # Daniel Powers – Portfolio
 
-👋 Hi, I’m Daniel, a Computer Science undergrad at MTSU applying to UTK’s MS in Computer Engineering program (Fall 2025). I’m passionate about embedded systems, hardware/software integration, and human-centered technology design.
+👋 Hi, I’m Daniel Powers — a Computer Science undergraduate at Middle Tennessee State University (MTSU), graduating Summer 2025 with a minor in Engineering Technology.
+
+I'm passionate about embedded systems, robotics, and designing intelligent hardware-software systems that solve real-world problems. I’m currently applying to the MS in Computer Engineering program at the University of Tennessee, Knoxville (UTK), with the goal of contributing to sustainable, human-centered technologies.
 
 ---
 
-## 🔧 Projects
+## 🔧 Featured Projects
 
-### 🔹 LED Driver Optimization (Undergraduate Research)
-- Investigated circuit reliability issues in custom LED driver boards.
-- Used multimeters and thermal imaging to detect failure modes.
-- Explored surge current mitigation and driver redesign.
+### 🌿 LED Driver Optimization for Agricultural Systems
+**Role:** Undergraduate Researcher, Smart Sensing and Robotics Lab  
+- Reduced LED array temperatures by **over 50%** in mold-control lighting systems.
+- Diagnosed and mitigated electrical faults (e.g., surge current, fuse sizing, driver failures).
+- Designed and tested an active cooling solution.
+- Gained hands-on experience in power electronics, thermal analysis, and iterative debugging.
 
-**Tools:** Oscilloscope, DMM, Power Electronics, Lab Work  
-![LED Setup](media/led_testbench.jpg)
-
----
-
-### 🔹 Arduino-Based Mobility Aid (Course Project)
-- Built a prototype sensor-integrated walking aid using Arduino + ultrasonic sensors.
-- Designed for real-time obstacle detection and fall alerting.
-
-**Tools:** Arduino, C++, Sensor Wiring, Breadboarding  
-[Watch demo video](https://youtu.be/yourdemo)
+> _*Images or lab setup video can go here once available*_
 
 ---
 
-### 🔹 PLC-Controlled Robotics Arm (ET Project)
-- Developed a 3-axis pick-and-place robotic arm using ladder logic and a PLC.
-- Programmed for precision motion using pneumatic actuators.
+### 🤖 Autonomous Line-Following Robot
+- Programmed sensor-based navigation using Arduino and PID control.
+- Handled calibration errors and edge-case logic.
+- Built using Makeblock Ultimate Kit hardware.
 
-**Tools:** Allen-Bradley PLC, Ladder Logic, CAD  
-(Screenshot or diagram here)
+> _*Add video demo or wiring photo if available*_
 
 ---
 
-## 📄 [Download My Resume (PDF)](resume/DanielPowers_Resume.pdf)
+### 🏭 PLC Conveyor System with Part Classification
+- Modeled an industrial sorting system using **Siemens S7-1500 PLC** and **TIA Portal**.
+- Integrated color and metal detection sensors.
+- Programmed safety features and classification logic with ladder diagrams.
+
+> _*Screenshots of ladder logic or photos of the build are ideal here*_
+
+---
+
+### 🎵 Mooflixz: Full-Stack Music Web App
+- Developed using **React.js**, **Node.js**, **MySQL**, and **Azure OAuth**.
+- Features Spotify/YouTube integration for music discovery and playlist creation.
+- Designed the SQL schema, implemented user authentication, and built a responsive frontend.
+
+> _GitHub link or screen recording can be embedded here._
+
+---
+
+### 📚 MTSU Study App
+- Helped centralize CS study materials.
+- Integrated Microsoft Azure authentication and co-designed frontend UI using React.
+
+---
+
+### 🚗 Student Parking App (JavaFX)
+- JavaFX app to assist students in locating permitted campus lots based on their parking pass and class locations.
+- Includes GUI design and input handling.
+
+---
+
+## 🏆 Leadership & Involvement
+**Vice President & Rank Leader**, Band of Blue Marching Band  
+- Led rehearsals, mentored section leaders, and supported event logistics.
+
+**Member**, Association for Computing Machinery (ACM)  
+**True Blue Scholarship Recipient**  
+**Dean’s List**, Fall 2021 – Present  
+
+---
+
+## 📄 Resume
+
+📥 [Download My Resume (PDF)](link-to-your-resume.pdf)
+
+---
+
+## 📬 Contact
+
+📧 dkp3g@mtmail.mtsu.edu  
+📧 keionnepowers@hotmail.com  
+📱 (970) 590-9094 (Text Preferred)
