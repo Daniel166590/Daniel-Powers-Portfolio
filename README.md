@@ -2,7 +2,7 @@
 
 👋 Hi, I’m Daniel Powers — a Computer Science undergraduate at Middle Tennessee State University (MTSU), graduating Summer 2025 with a minor in Engineering Technology.
 
-I'm passionate about embedded systems, robotics, and designing intelligent hardware-software systems that solve real-world problems. I’m currently applying to the MS in Computer Engineering program at the University of Tennessee, Knoxville (UTK), with the goal of contributing to sustainable, human-centered technologies.
+I'm passionate about applying the knowledge gained through my Computer Science Major towards embedded systems, robotics, and designing intelligent hardware-software systems that solve real-world problems. I’m currently applying to the MS in Computer Engineering program at the University of Tennessee, Knoxville (UTK), with the goal of contributing to sustainable, human-centered technologies.
 
 ---
 
