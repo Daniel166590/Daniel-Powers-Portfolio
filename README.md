@@ -6,9 +6,9 @@ I'm passionate about applying the knowledge gained through my Computer Science M
 
 ---
 
-## 🔧 Featured Projects
+## Featured Projects
 
-### 🌿 LED Driver Optimization for Agricultural Systems
+### LED Driver Optimization for Agricultural Systems
 **Role:** Undergraduate Researcher, Smart Sensing and Robotics Lab  
 - Reduced LED array temperatures by **over 50%** in mold-control lighting systems.
 - Diagnosed and mitigated electrical faults (e.g., surge current, fuse sizing, driver failures).
@@ -19,7 +19,7 @@ I'm passionate about applying the knowledge gained through my Computer Science M
 
 ---
 
-### 🤖 Autonomous Line-Following Robot
+### Autonomous Line-Following Robot
 - Programmed sensor-based navigation using Arduino and PID control.
 - Handled calibration errors and edge-case logic.
 - Built using Makeblock Ultimate Kit hardware.
@@ -28,7 +28,7 @@ I'm passionate about applying the knowledge gained through my Computer Science M
 
 ---
 
-### 🏭 PLC Conveyor System with Part Classification
+### PLC Conveyor System with Part Classification
 - Modeled an industrial sorting system using **Siemens S7-1500 PLC** and **TIA Portal**.
 - Integrated color and metal detection sensors.
 - Programmed safety features and classification logic with ladder diagrams.
@@ -37,7 +37,7 @@ I'm passionate about applying the knowledge gained through my Computer Science M
 
 ---
 
-### 🎵 Mooflixz: Full-Stack Music Web App
+### Mooflixz: Full-Stack Music Web App
 - Developed using **React.js**, **Node.js**, **MySQL**, and **Azure OAuth**.
 - Features Spotify/YouTube integration for music discovery and playlist creation.
 - Designed the SQL schema, implemented user authentication, and built a responsive frontend.
@@ -46,19 +46,19 @@ I'm passionate about applying the knowledge gained through my Computer Science M
 
 ---
 
-### 📚 MTSU Study App
+### MTSU Study App
 - Helped centralize CS study materials.
 - Integrated Microsoft Azure authentication and co-designed frontend UI using React.
 
 ---
 
-### 🚗 Student Parking App (JavaFX)
+### Student Parking App (JavaFX)
 - JavaFX app to assist students in locating permitted campus lots based on their parking pass and class locations.
 - Includes GUI design and input handling.
 
 ---
 
-## 🏆 Leadership & Involvement
+## Leadership & Involvement
 **Vice President & Rank Leader**, Band of Blue Marching Band  
 - Led rehearsals, mentored section leaders, and supported event logistics.
 
@@ -72,8 +72,8 @@ I'm passionate about applying the knowledge gained through my Computer Science M
 
 📥 [Download My Resume (PDF)](link-to-your-resume.pdf)
 
----
 
+---
 ## 📬 Contact
 
 📧 dkp3g@mtmail.mtsu.edu  
