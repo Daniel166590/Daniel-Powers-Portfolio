@@ -59,12 +59,12 @@ I'm passionate about applying the knowledge gained through my Computer Science M
 ---
 
 ## Leadership & Involvement
-**Vice President & Rank Leader**, Band of Blue Marching Band  
+**Vice President & Rank Leader**, Band of Blue Marching Band<br>
 - Led rehearsals, mentored section leaders, and supported event logistics.
 
-**Member**, Association for Computing Machinery (ACM)  
-**True Blue Scholarship Recipient**, 8/8 Semesters 
-**Dean’s List**, Fall 2021 – Present  
+**Member**, Association for Computing Machinery (ACM)<br>
+**True Blue Scholarship Recipient**, 8/8 Semesters<br>
+**Dean's List**, Fall 2021 – Present
 
 ---
 
