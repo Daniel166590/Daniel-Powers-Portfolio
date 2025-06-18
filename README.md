@@ -63,7 +63,7 @@ I'm passionate about applying the knowledge gained through my Computer Science M
 - Led rehearsals, mentored section leaders, and supported event logistics.
 
 **Member**, Association for Computing Machinery (ACM)  
-**True Blue Scholarship Recipient**  
+**True Blue Scholarship Recipient**, 8/8 Semesters 
 **Dean’s List**, Fall 2021 – Present  
 
 ---
