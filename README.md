@@ -28,7 +28,7 @@ I'm passionate about applying the knowledge gained through my Computer Science M
 
 ---
 
-### PLC Conveyor System with Part Classification
+### PLC Conveyor System with Part Classification 
 - Modeled an industrial sorting system using **Siemens S7-1500 PLC** and **TIA Portal**.
 - Integrated color and metal detection sensors.
 - Programmed safety features and classification logic with ladder diagrams.
@@ -37,7 +37,7 @@ I'm passionate about applying the knowledge gained through my Computer Science M
 
 ---
 
-### Mooflixz: Full-Stack Music Web App
+### Mooflixz: Full-Stack Music Web App (Node.js, React.js, and MySQL)
 - Developed using **React.js**, **Node.js**, **MySQL**, and **Azure OAuth**.
 - Features Spotify/YouTube integration for music discovery and playlist creation.
 - Designed the SQL schema, implemented user authentication, and built a responsive frontend.
@@ -46,7 +46,7 @@ I'm passionate about applying the knowledge gained through my Computer Science M
 
 ---
 
-### MTSU Study App
+### MTSU Study App (Node.js & React.js)
 - Helped centralize CS study materials.
 - Integrated Microsoft Azure authentication and co-designed frontend UI using React.
 
