@@ -11,9 +11,10 @@ I'm passionate about applying the knowledge gained through my Computer Science M
 ### LED Driver Optimization for Agricultural Systems
 **Role:** Undergraduate Researcher, Smart Sensing and Robotics Lab  
 - Reduced LED array temperatures by **over 50%** in a portable lighting system.
-- Diagnosed and mitigated electrical faults (e.g., surge current, fuse sizing, driver failures).
+- Diagnosed and mitigated potential electrical faults (e.g., surge current, fuse sizing, driver failures).
 - Designed and tested an active cooling solution.
 - Gained hands-on experience in power electronics, thermal analysis, and iterative debugging.
+- Designed testing, conducted research, and documented results.
 
 > _*Images or lab setup video can go here once available*_
 
