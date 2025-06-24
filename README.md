@@ -22,7 +22,7 @@ I'm passionate about applying the knowledge gained through my Computer Science M
   <img src="https://drive.google.com/uc?export=view&id=1jLtY4lpJvehEIwqqLKWrmPeQKWra7jTE" width="300"/>
 </div>
 
-> [Browse the full research media archive](https://drive.google.com/drive/folders/1V1oGmuduu4vE4Lxfo83EEtWq45R1BIOt?usp=sharing)
+> [Browse the Full Research Media Archive via Google Drive](https://drive.google.com/drive/folders/1V1oGmuduu4vE4Lxfo83EEtWq45R1BIOt?usp=sharing)
 
 ---
 
