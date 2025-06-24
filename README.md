@@ -16,7 +16,7 @@ I'm passionate about applying the knowledge gained through my Computer Science M
 - Gained hands-on experience in power electronics, thermal analysis, and iterative debugging.
 - Designed testing, conducted research, and documented results.
 
-> ![Robot Diagram](https://drive.google.com/file/d/1jUI4QdHzeJfX6BJfudFKczdcuxUhFSik/view?usp=sharing)
+> ![Robot Diagram](https://drive.google.com/file/d/1o5zPUO9yLZ1aoUgBqBw1UqlsNnoC6b7N/view?usp=sharing)
 > ()
 
 > [Browse the full research media archive](https://drive.google.com/drive/folders/YOUR_FOLDER_ID?usp=sharing)
