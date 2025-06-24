@@ -2,7 +2,7 @@
 
 Hi, I’m Daniel Powers — a Computer Science undergraduate at Middle Tennessee State University (MTSU), graduating in Summer 2025 with a minor in Engineering Technology and Audio Production.
 
-I'm passionate about applying the knowledge gained through my Computer Science Major towards embedded systems, robotics, and designing intelligent hardware-software systems that solve real-world problems. I’m currently applying to the MS in Computer Engineering program at the University of Tennessee, Knoxville (UTK), with the goal of contributing to sustainable, human-centered technologies.
+I'm passionate about applying the knowledge gained through my Computer Science Major to embedded systems, robotics, and designing intelligent hardware-software systems that solve real-world problems. I’m pursuing an MS in Computer Engineering at the University of Tennessee, Knoxville (UTK), hoping to contribute to sustainable, human-centered technologies and further bridge my knowledge of hardware-software integration.
 
 ---
 
@@ -53,7 +53,7 @@ I'm passionate about applying the knowledge gained through my Computer Science M
 ---
 
 ### Student Parking App (JavaFX)
-- JavaFX app to assist students in locating permitted campus lots based on their parking pass and class locations.
+- The JavaFX app will assist students in locating permitted campus lots based on their parking pass and class locations.
 - Includes GUI design and input handling.
 
 ---
@@ -70,7 +70,7 @@ I'm passionate about applying the knowledge gained through my Computer Science M
 
 ## 📄 Resume
 
-📥 [Download My Resume (PDF)](link-to-your-resume.pdf)
+📥 [Download My Resume (PDF)](link-to-your-resume)
 
 
 ---
@@ -79,3 +79,5 @@ I'm passionate about applying the knowledge gained through my Computer Science M
 📧 dkp3g@mtmail.mtsu.edu  
 📧 keionnepowers@hotmail.com  
 📱 (970) 590-9094 (Text Preferred)
+
+
