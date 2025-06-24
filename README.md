@@ -8,22 +8,22 @@ I'm passionate about applying the knowledge gained through my Computer Science M
 
 ## Featured Projects
 
-### LED Driver Optimization for Agricultural Systems
+### LED Driver Optimization for Agricultural Systems  
 **Role:** Undergraduate Researcher, Smart Sensing and Robotics Lab  
 
 <div style="display: flex; align-items: center;">
-  <img src="https://drive.google.com/uc?export=view&id=1o5zPUO9yLZ1aoUgBqBw1UqlsNnoC6b7N" width="300" style="margin-right:10px;"/>
-  <img src="https://drive.google.com/uc?export=view&id=1LnHfMln0io7sbPcEEn78E4MWbMlL5nxO" width="400" alt="Description"/>
-  <img src="https://drive.google.com/uc?export=view&id=1jLtY4lpJvehEIwqqLKWrmPeQKWra7jTE" width="300"/>
+  <img src="https://drive.google.com/uc?export=view&id=1o5zPUO9yLZ1aoUgBqBw1UqlsNnoC6b7N" width="300" style="margin-right:10px;" alt="MTSU LED lighting Cart Towing Test"/>
+  <img src="https://drive.google.com/uc?export=view&id=1LnHfMln0io7sbPcEEn78E4MWbMlL5nxO" width="400" style="margin-right:10px;" alt="Custom wiring schematic for LED panel"/>
+  <img src="https://drive.google.com/uc?export=view&id=1jLtY4lpJvehEIwqqLKWrmPeQKWra7jTE" width="300" alt="Illuminated MTSU lighting system during night testing"/>
 </div>
 
-- Reduced LED array temperatures by **over 50%** in a portable lighting system.
-- Diagnosed and mitigated potential electrical faults (e.g., surge current, fuse sizing, driver failures).
-- Designed and tested an active cooling solution.
-- Gained hands-on experience in power electronics, thermal analysis, and iterative debugging.
-- Designed testing, conducted research, and documented results.
+- Designed and tested an active cooling system that **reduced LED array temperatures by over 50%**.
+- Identified and resolved electrical faults, including surge current events, incorrect fuse ratings, and driver instability.
+- Acquired practical experience in power electronics, thermal characterization, and hardware-level debugging.
+- Created a modular schematic for a portable, multi-panel LED array with independent power channels.
+- Documented research procedures, design revisions, and test results for lab continuity.
 
-> [Browse my Full Research Archive via Google Drive](https://drive.google.com/drive/folders/1V1oGmuduu4vE4Lxfo83EEtWq45R1BIOt?usp=sharing)
+> [Browse Full Research Archive on Google Drive](https://drive.google.com/drive/folders/1V1oGmuduu4vE4Lxfo83EEtWq45R1BIOt?usp=sharing)
 
 ---
 
