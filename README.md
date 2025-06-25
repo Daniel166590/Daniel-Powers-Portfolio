@@ -143,7 +143,7 @@ void move(int direction, int speed){
 - Integrated color and metal detection sensors.
 - Programmed safety features and classification logic with ladder diagrams.
 
-> _*Screenshots of ladder logic or photos of the build are ideal here*_
+> [View Full Sorting Ladder Logic (SortingLadder)](PLCMedia/SortingLadder.pdf)
 
 ---
 
