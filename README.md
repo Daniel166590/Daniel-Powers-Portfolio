@@ -25,7 +25,7 @@ I'm passionate about applying the knowledge gained through my Computer Science M
 - Documented research procedures, design revisions, and test results for lab continuity.
 
 **241 Robot**
-Autonomous towing platform used to mobilize the LED Driver Cart during field testing.
+> Autonomous towing platform used to mobilize the LED Driver Cart during field testing.
 - Sole maintainer and point of contact for a legacy autonomous robot system with a Python-based control codebase.
 - Responsible for operating the robot during research trials and maintaining functional readiness across test cycles.
 - Coordinated synchronized testing between the 241 Robot and the LED Driver Cart, ensuring consistent deployment conditions.
