@@ -17,22 +17,28 @@ I'm passionate about applying the knowledge gained through my Computer Science M
   <img src="https://drive.google.com/uc?export=view&id=1jLtY4lpJvehEIwqqLKWrmPeQKWra7jTE" width="300" alt="Illuminated MTSU lighting system during night testing"/>
 </div>
 
+**LED Driver Cart**
 - Designed and tested an active cooling system that **reduced LED array temperatures by over 50%**.
 - Identified and resolved electrical faults, including surge current events, incorrect fuse ratings, and driver instability.
 - Acquired practical experience in power electronics, thermal characterization, and hardware-level debugging.
 - Created a modular schematic for a portable, multi-panel LED array with independent power channels.
 - Documented research procedures, design revisions, and test results for lab continuity.
 
+**241 Robot**
+- Overseeing the operation and maintance of the towing robot
+- Coordinating combined tests with LED Driver Cart
+
 > [Browse Full Research Archive on Google Drive](https://drive.google.com/drive/folders/1V1oGmuduu4vE4Lxfo83EEtWq45R1BIOt?usp=sharing)
 
 ---
 
 ### Autonomous Line-Following Robot
-- Programmed sensor-based navigation using Arduino.
-- Handled calibration errors and edge-case logic.
-- Built using Makeblock Ultimate Kit hardware.
+- Developed a sensor-driven navigation algorithm on Arduino using IR reflectance sensors.
+- Implemented calibration to correct motor outputs and sensor edge detection errors.
+- Built and tested on a Makeblock Ultimate Kit platform with tuning.
+- Experimented with logic for real-time control decisions on sharp turns, intersections, and junction loss.
 
-> _*Add video demo or wiring photo if available*_
+> [📹 Watch Demo Video](#) | [🔧 View Project Files (Google Drive)](#)
 
 ---
 
