@@ -21,6 +21,7 @@ I’m preparing to begin an M.S. in Computer Engineering at the University of Te
 - [Student Parking App (JavaFX)](#student-parking-app-javafx)
 
 ### Additional Information
+- [Relevant Coursework](#relevant-coursework)
 - [Leadership & Involvement](#leadership--involvement)
 - [Resume & CV](#resume--cv)
 - [Contact](#contact)
@@ -167,6 +168,42 @@ void move(int direction, int speed){
 - Includes GUI design and input handling.
 
 ---
+
+## Relevant Coursework
+
+**Computer Science (Major – GPA: 4.0)**  
+- CSCI 1170: Computer Science I  
+- CSCI 2170: Computer Science II  
+- CSCI 3080: Discrete Structures  
+- CSCI 3110: Algorithms and Data Structures  
+- CSCI 3130: Assembly and Computer Organization  
+- CSCI 3210: Theory of Programming Languages  
+- CSCI 3240: Introduction to Computer Systems  
+- CSCI 4160: Compiler Design and Software Development  
+- CSCI 4250: Computer Graphics  
+- CSCI 4560: Database Management Systems  
+- CSCI 4700: Software Engineering  
+- CSCI 4900: Selected Topics in CS (Summer 2025)
+
+**Mathematics & Science (Supporting CS)**  
+- MATH 1910: Calculus I  
+- MATH 1920: Calculus II  
+- MATH 2050: Probability and Statistics  
+- MATH 3110: Calculus III (In Progress)  
+- PHYS 2111/2121: Calculus-Based Physics I & II  
+- CHEM 1110: General Chemistry I (In Progress)
+
+**Engineering Technology (Minor – GPA: 4.0)**  
+- ET 3601: Electrical Circuit Analysis I  
+- ET 3602: Electrical Circuit Analysis II  
+- ET 4600: Programmable Logic Controllers (In Progress)  
+- ET 4860: Robotics (In Progress)  
+- ET 3610: Intro to Electricity & Electronics (In Progress)  
+- ENGR 1100: Engineering Fundamentals  
+
+**Applied Ethics & Communication**  
+- PHIL 3170: Ethics and Computing Technology  
+- COMM 2200: Fundamentals of Communication
 
 ## Leadership & Involvement
 **Vice President & Rank Leader**, Band of Blue Marching Band<br>
