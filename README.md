@@ -20,6 +20,11 @@ I’m preparing to begin an M.S. in Computer Engineering at the University of Te
 - [MTSU Study App (Node.js & React.js)](#mtsu-study-app-nodejs--reactjs)
 - [Student Parking App (JavaFX)](#student-parking-app-javafx)
 
+### Additional Information
+- [Leadership & Involvement](#leadership--involvement)
+- [Resume & CV](#-resume)
+- [Contact](#-contact)
+
 ## Featured Projects
 
 ### LED Driver Optimization for Agricultural Systems  
@@ -173,13 +178,13 @@ void move(int direction, int speed){
 
 ---
 
-## 📄 Resume
+## Resume & CV
 
 📥 [Download My Resume (PDF)](link-to-your-resume)
 
 
 ---
-## 📬 Contact
+## Contact
 
 📧 dkp3g@mtmail.mtsu.edu  
 📧 keionnepowers@hotmail.com  
