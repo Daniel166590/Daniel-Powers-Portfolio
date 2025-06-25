@@ -121,20 +121,12 @@ void move(int direction, int speed){
 ---
 
 ### PLC Conveyor System with Part Classification 
-
+https://drive.google.com/file/d/1FBSW3lr7R54ivPd10oHFcix1jGrYfYk6/view?usp=sharing
 <table>
   <tr>
     <td align="left">
-      <img src="https://drive.google.com/uc?export=view&id=1o5zPUO9yLZ1aoUgBqBw1UqlsNnoC6b7N" height="500"/><br/>
-      <sub>Ladder Logic for Sorting #1</sub>
-    </td>
-    <td align="left">
-      <img src="https://drive.google.com/uc?export=view&id=1LnHfMln0io7sbPcEEn78E4MWbMlL5nxO" height="500"/><br/>
+      <img src="https://drive.google.com/uc?export=view&id=1FBSW3lr7R54ivPd10oHFcix1jGrYfYk6" height="500"/><br/>
       <sub>Image of Model Sorting System Programmed</sub>
-    </td>
-    <td align="left">
-      <img src="https://drive.google.com/uc?export=view&id=1jLtY4lpJvehEIwqqLKWrmPeQKWra7jTE" height="500"/><br/>
-      <sub>Ladder Logic for Sorting #2</sub>
     </td>
   </tr>
 </table>
