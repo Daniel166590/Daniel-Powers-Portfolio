@@ -30,7 +30,7 @@ I’m preparing to begin an M.S. in Computer Engineering at the University of Te
 ### LED Driver Optimization for Agricultural Systems  
 **Role:** Undergraduate Researcher, Smart Sensing and Robotics Lab  
 
-<table>
+<table align="center">
   <tr>
     <td align="left">
       <img src="https://drive.google.com/uc?export=view&id=1o5zPUO9yLZ1aoUgBqBw1UqlsNnoC6b7N" height="500"/><br/>
@@ -68,7 +68,7 @@ I’m preparing to begin an M.S. in Computer Engineering at the University of Te
 
 ### Autonomous Line-Following Robot
 
-<table>
+<table align="center">
   <tr>
     <td align="left">
       <img src="RoboticsMedia/LineFollowingTest.gif" height="500"/><br/>
@@ -121,12 +121,16 @@ void move(int direction, int speed){
 ---
 
 ### PLC Conveyor System with Part Classification 
-https://drive.google.com/file/d/1FBSW3lr7R54ivPd10oHFcix1jGrYfYk6/view?usp=sharing
-<table>
+
+<table align="center">
   <tr>
     <td align="left">
       <img src="https://drive.google.com/uc?export=view&id=1FBSW3lr7R54ivPd10oHFcix1jGrYfYk6" height="500"/><br/>
       <sub>Image of Model Sorting System Programmed</sub>
+    </td>
+    <td align="left">
+      <img src="PLCMedia/SortingLadder1.jpg" height="500"/><br/>
+      <sub>Image 1 of Ladder Logic</sub>
     </td>
   </tr>
 </table>
