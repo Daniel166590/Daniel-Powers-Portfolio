@@ -25,8 +25,11 @@ I'm passionate about applying the knowledge gained through my Computer Science M
 - Documented research procedures, design revisions, and test results for lab continuity.
 
 **241 Robot**
-- Overseeing the operation and maintance of the towing robot
-- Coordinating combined tests with LED Driver Cart
+Autonomous towing platform used to mobilize the LED Driver Cart during field testing.
+- Sole maintainer and point of contact for a legacy autonomous robot system with a Python-based control codebase.
+- Responsible for operating the robot during research trials and maintaining functional readiness across test cycles.
+- Coordinated synchronized testing between the 241 Robot and the LED Driver Cart, ensuring consistent deployment conditions.
+- Provide system knowledge, troubleshooting support, and operational guidance to lab members unfamiliar with the platform.
 
 > [Browse Full Research Archive on Google Drive](https://drive.google.com/drive/folders/1V1oGmuduu4vE4Lxfo83EEtWq45R1BIOt?usp=sharing)
 
