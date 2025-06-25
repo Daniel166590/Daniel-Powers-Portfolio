@@ -52,7 +52,7 @@ I'm passionate about applying the knowledge gained through my Computer Science M
 <table>
   <tr>
     <td align="left">
-      <img src="RoboticsMedia/LineFollowingTest.gif" width="200"/><br/>
+      <img src="RoboticsMedia/LineFollowingTest.gif" width="250"/><br/>
       <sub>Line-following Robot: Line-following demo</sub>
     </td>
     <td align="left">
@@ -60,7 +60,7 @@ I'm passionate about applying the knowledge gained through my Computer Science M
       <sub>Boolean Based Line-following Approach</sub>
     </td>
     <td>
-      <img src="RoboticsMedia/ClimbingTest.gif" width="200"/><br/>
+      <img src="RoboticsMedia/ClimbingTest.gif" width="250"/><br/>
       <sub>Line-Following Robot: Climbing Test</sub>  
     </td>
     </tr>
