@@ -1,10 +1,24 @@
 # Daniel Powers – Portfolio
 
-Hi, I’m Daniel Powers — a Computer Science undergraduate at Middle Tennessee State University (MTSU), graduating in Summer 2025 with a minor in Engineering Technology and Audio Production.
+Hi, I’m Daniel Powers, a Computer Science undergraduate at Middle Tennessee State University (MTSU). I will graduate in Summer 2025 with minors in Engineering Technology and Audio Production.
 
-I'm passionate about applying the knowledge gained through my Computer Science Major to embedded systems, robotics, and designing intelligent hardware-software systems that solve real-world problems. I’m pursuing an MS in Computer Engineering at the University of Tennessee, Knoxville (UTK), hoping to contribute to sustainable, human-centered technologies and further bridge my knowledge of hardware-software integration.
+What began as a love for software and problem-solving evolved into a passion for intelligent hardware-software systems. Through hands-on experience with platforms like Arduino and Siemens PLCs, I discovered how rewarding it is to build embedded systems that respond to the real world — systems that don’t just compute, but interact. That realization drove me to accelerate graduation and pursue embedded computing with clarity and urgency.
+
+I’m preparing to begin an M.S. in Computer Engineering at the University of Tennessee, Knoxville (UTK). I aim to contribute to sustainable, human-centered technologies — from intelligent robotics to assistive devices. This portfolio showcases the work that shaped that path: from low-level motor control to lighting system diagnostics, from practical logic design to research-driven circuit optimization.
 
 ---
+
+## Project Index
+
+### Embedded Systems & Engineering Projects
+- [LED Driver Optimization for Agricultural Systems](#led-driver-optimization-for-agricultural-systems)
+- [Autonomous Line-Following Robot](#autonomous-line-following-robot)
+- [PLC Conveyor System with Part Classification](#plc-conveyor-system-with-part-classification)
+
+### Computer Science & Software Projects
+- [Mooflixz: Full-Stack Music Web App](#mooflixz-full-stack-music-web-app-nodejs-reactjs-and-mysql)
+- [MTSU Study App (Node.js & React.js)](#mtsu-study-app-nodejs--reactjs)
+- [Student Parking App (JavaFX)](#student-parking-app-javafx)
 
 ## Featured Projects
 
@@ -102,6 +116,24 @@ void move(int direction, int speed){
 ---
 
 ### PLC Conveyor System with Part Classification 
+
+<table>
+  <tr>
+    <td align="left">
+      <img src="https://drive.google.com/uc?export=view&id=1o5zPUO9yLZ1aoUgBqBw1UqlsNnoC6b7N" height="500"/><br/>
+      <sub>Ladder Logic for Sorting #1</sub>
+    </td>
+    <td align="left">
+      <img src="https://drive.google.com/uc?export=view&id=1LnHfMln0io7sbPcEEn78E4MWbMlL5nxO" height="500"/><br/>
+      <sub>Image of Model Sorting System Programmed</sub>
+    </td>
+    <td align="left">
+      <img src="https://drive.google.com/uc?export=view&id=1jLtY4lpJvehEIwqqLKWrmPeQKWra7jTE" height="500"/><br/>
+      <sub>Ladder Logic for Sorting #2</sub>
+    </td>
+  </tr>
+</table>
+
 - Modeled an industrial sorting system using **Siemens S7-1500 PLC** and **TIA Portal**.
 - Integrated color and metal detection sensors.
 - Programmed safety features and classification logic with ladder diagrams.
