@@ -52,15 +52,12 @@ I'm passionate about applying the knowledge gained through my Computer Science M
 <table>
   <tr>
     <td align="left">
-      <video width="300" controls>
-        <source src="RoboticsMedia/LineFollowingTest.gif">
-        Your browser does not support the video tag.
-      </video><br/>
+      <img src="RoboticsMedia/LineFollowingTest.gif" width="300"/><br/>
       <sub>Line-following Robot: Line-following demo</sub>
     </td>
     <td align="left">
-      <img src="https://drive.google.com/uc?export=view&id=1gVb6Ot8ZYndT0JbEB1qBR6jgGMwUvegA" width="400"/><br/>
-      <sub>Hand Drawn Logic for Boolean Based LineFollowing Approach</sub>
+      <img src="https://drive.google.com/uc?export=view&id=1gVb6Ot8ZYndT0JbEB1qBR6jgGMwUvegA" width="450"/><br/>
+      <sub>Boolean Based Line-following Approach</sub>
     </td>
     <td>
       <img src="RoboticsMedia/ClimbingTest.gif" width="300"/><br/>
@@ -74,7 +71,7 @@ I'm passionate about applying the knowledge gained through my Computer Science M
 - Built and tested on a Makeblock Ultimate Kit platform with tuning.
 - Experimented with logic for real-time control decisions on sharp turns, intersections, and junction loss.
 
-> [📹 Watch Demo Video](#) | [🔧 View Project Files (Google Drive)](#)
+> [View Arduino Code (LineFollower.ino)](RoboticsMedia/ArduinoCode/LineFollower.ino)
 
 ---
 
