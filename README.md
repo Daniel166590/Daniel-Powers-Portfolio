@@ -14,15 +14,15 @@ I'm passionate about applying the knowledge gained through my Computer Science M
 <table>
   <tr>
     <td align="left">
-      <img src="https://drive.google.com/uc?export=view&id=1o5zPUO9yLZ1aoUgBqBw1UqlsNnoC6b7N" width="300"/><br/>
+      <img src="https://drive.google.com/uc?export=view&id=1o5zPUO9yLZ1aoUgBqBw1UqlsNnoC6b7N" height="500"/><br/>
       <sub>MTSU LED lighting Cart Towing Test</sub>
     </td>
     <td align="left">
-      <img src="https://drive.google.com/uc?export=view&id=1LnHfMln0io7sbPcEEn78E4MWbMlL5nxO" width="400"/><br/>
+      <img src="https://drive.google.com/uc?export=view&id=1LnHfMln0io7sbPcEEn78E4MWbMlL5nxO" height="500"/><br/>
       <sub>Custom drawn wiring schematic for LED panel</sub>
     </td>
     <td align="left">
-      <img src="https://drive.google.com/uc?export=view&id=1jLtY4lpJvehEIwqqLKWrmPeQKWra7jTE" width="380"/><br/>
+      <img src="https://drive.google.com/uc?export=view&id=1jLtY4lpJvehEIwqqLKWrmPeQKWra7jTE" height="500"/><br/>
       <sub>Illuminated MTSU lighting system during night testing</sub>
     </td>
   </tr>
@@ -52,15 +52,15 @@ I'm passionate about applying the knowledge gained through my Computer Science M
 <table>
   <tr>
     <td align="left">
-      <img src="RoboticsMedia/LineFollowingTest.gif" width="250"/><br/>
-      <sub>Line-following Robot: Line-following demo (Reversed)</sub>
+      <img src="RoboticsMedia/LineFollowingTest.gif" height="500"/><br/>
+      <sub>Line-following Robot: Line-following demo</sub>
     </td>
     <td align="left">
-      <img src="https://drive.google.com/uc?export=view&id=1gVb6Ot8ZYndT0JbEB1qBR6jgGMwUvegA" width="350"/><br/>
+      <img src="https://drive.google.com/uc?export=view&id=1gVb6Ot8ZYndT0JbEB1qBR6jgGMwUvegA" height="500"/><br/>
       <sub>Boolean Based Line-following Approach</sub>
     </td>
     <td>
-      <img src="RoboticsMedia/ClimbingTest.gif" width="250"/><br/>
+      <img src="RoboticsMedia/ClimbingTest.gif" height="500"/><br/>
       <sub>Line-Following Robot: Climbing Test</sub>  
     </td>
     </tr>
@@ -92,10 +92,10 @@ void move(int direction, int speed){
 }
 ```
 
-- Developed a sensor-driven navigation algorithm on Arduino IDE using IR reflectance sensors.
-- Implemented calibration to correct motor outputs and sensor edge detection errors.
-- Built and tested on a Makeblock Ultimate Kit platform with tuning.
-- Experimented with logic for real-time control decisions on sharp turns, intersections, and junction loss.
+- Developed a **sensor-driven navigation algorithm** on Arduino IDE using **IR reflectance sensors**.
+- Implemented **motor calibration** and **sensor edge detection error correction**.
+- Built and tested on a **Makeblock Ultimate Kit** platform.
+- Experimented with logic for **junction loss**, **sharp turns**, and **intersection control**.
 
 > [View Arduino Code (LineFollower.ino)](RoboticsMedia/ArduinoCode/LineFollower.ino)
 
