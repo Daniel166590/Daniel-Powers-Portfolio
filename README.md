@@ -66,7 +66,6 @@ I'm passionate about applying the knowledge gained through my Computer Science M
     </tr>
 </table>
 
-<pre>
 ```cpp
 // Basic snippet from line-following robot
 void move(int direction, int speed){
@@ -91,7 +90,6 @@ void move(int direction, int speed){
   Encoder_2.setTarPWM(rightSpeed * 1.20);
 }
 ```
-</pre>
 
 - Developed a sensor-driven navigation algorithm on Arduino IDE using IR reflectance sensors.
 - Implemented calibration to correct motor outputs and sensor edge detection errors.
