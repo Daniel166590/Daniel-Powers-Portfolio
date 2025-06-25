@@ -53,7 +53,7 @@ I'm passionate about applying the knowledge gained through my Computer Science M
   <tr>
     <td align="left">
       <img src="RoboticsMedia/LineFollowingTest.gif" width="250"/><br/>
-      <sub>Line-following Robot: Line-following demo</sub>
+      <sub>Line-following Robot: Line-following demo (Reversed)</sub>
     </td>
     <td align="left">
       <img src="https://drive.google.com/uc?export=view&id=1gVb6Ot8ZYndT0JbEB1qBR6jgGMwUvegA" width="350"/><br/>
@@ -65,6 +65,34 @@ I'm passionate about applying the knowledge gained through my Computer Science M
     </td>
     </tr>
 </table>
+
+<pre>
+```cpp
+// Basic snippet from line-following robot
+void move(int direction, int speed){
+  int leftSpeed = 0;
+  int rightSpeed = 0;
+  
+  if (direction == 1) { // Right
+    leftSpeed = -1 * speed;
+    rightSpeed = speed;
+  } else if (direction == 2) { // Left
+    leftSpeed = speed;
+    rightSpeed = -1 * speed;
+  } else if (direction == 3) { // Forwards
+    leftSpeed = speed;
+    rightSpeed = speed;
+  } else if (direction == 4) { // Backwards
+    leftSpeed = -1 * speed;
+    rightSpeed = -1 * speed;
+  }
+  
+  Encoder_1.setTarPWM(leftSpeed);
+  Encoder_2.setTarPWM(rightSpeed * 1.20);
+}
+```
+</pre>
+
 
 - Developed a sensor-driven navigation algorithm on Arduino IDE using IR reflectance sensors.
 - Implemented calibration to correct motor outputs and sensor edge detection errors.
