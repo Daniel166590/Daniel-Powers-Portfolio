@@ -52,15 +52,15 @@ I'm passionate about applying the knowledge gained through my Computer Science M
 <table>
   <tr>
     <td align="left">
-      <img src="RoboticsMedia/LineFollowingTest.gif" width="300"/><br/>
+      <img src="RoboticsMedia/LineFollowingTest.gif" width="200"/><br/>
       <sub>Line-following Robot: Line-following demo</sub>
     </td>
     <td align="left">
-      <img src="https://drive.google.com/uc?export=view&id=1gVb6Ot8ZYndT0JbEB1qBR6jgGMwUvegA" width="450"/><br/>
+      <img src="https://drive.google.com/uc?export=view&id=1gVb6Ot8ZYndT0JbEB1qBR6jgGMwUvegA" width="350"/><br/>
       <sub>Boolean Based Line-following Approach</sub>
     </td>
     <td>
-      <img src="RoboticsMedia/ClimbingTest.gif" width="300"/><br/>
+      <img src="RoboticsMedia/ClimbingTest.gif" width="200"/><br/>
       <sub>Line-Following Robot: Climbing Test</sub>  
     </td>
     </tr>
