@@ -13,16 +13,16 @@ I'm passionate about applying the knowledge gained through my Computer Science M
 
 <table>
   <tr>
-    <td align="center">
+    <td align="left">
       <img src="https://drive.google.com/uc?export=view&id=1o5zPUO9yLZ1aoUgBqBw1UqlsNnoC6b7N" width="300"/><br/>
       <sub>MTSU LED lighting Cart Towing Test</sub>
     </td>
-    <td align="center">
+    <td align="left">
       <img src="https://drive.google.com/uc?export=view&id=1LnHfMln0io7sbPcEEn78E4MWbMlL5nxO" width="400"/><br/>
       <sub>Custom drawn wiring schematic for LED panel</sub>
     </td>
-    <td align="center">
-      <img src="https://drive.google.com/uc?export=view&id=1jLtY4lpJvehEIwqqLKWrmPeQKWra7jTE" width="300"/><br/>
+    <td align="left">
+      <img src="https://drive.google.com/uc?export=view&id=1jLtY4lpJvehEIwqqLKWrmPeQKWra7jTE" width="380"/><br/>
       <sub>Illuminated MTSU lighting system during night testing</sub>
     </td>
   </tr>
@@ -51,25 +51,22 @@ I'm passionate about applying the knowledge gained through my Computer Science M
 
 <table>
   <tr>
-    <td align="center">
+    <td align="left">
       <video width="300" controls>
-        <source src="RoboticsMedia/LineFollowingTest.mp4" type="video/mp4">
+        <source src="RoboticsMedia/LineFollowingTest.gif">
         Your browser does not support the video tag.
       </video><br/>
-      <sub>Line-following demo: obstacle course test</sub>
+      <sub>Line-following Robot: Line-following demo</sub>
     </td>
-    <td align="center">
+    <td align="left">
       <img src="https://drive.google.com/uc?export=view&id=1gVb6Ot8ZYndT0JbEB1qBR6jgGMwUvegA" width="400"/><br/>
       <sub>Hand Drawn Logic for Boolean Based LineFollowing Approach</sub>
     </td>
-    <td align="center">
-      <video width="300" controls>
-        <source src="RoboticsMedia/ClimbingTest.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video><br/>
-      <sub>Line-following demo: calibration test</sub>
+    <td>
+      <img src="RoboticsMedia/ClimbingTest.gif" width="300"/><br/>
+      <sub>Line-Following Robot: Climbing Test</sub>  
     </td>
-  </tr>
+    </tr>
 </table>
 
 - Developed a sensor-driven navigation algorithm on Arduino IDE using IR reflectance sensors.
