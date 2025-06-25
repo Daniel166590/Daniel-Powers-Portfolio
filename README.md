@@ -125,6 +125,10 @@ void move(int direction, int speed){
 <table align="center">
   <tr>
     <td align="left">
+      <img src="PLCMedia/SortingStationWorksheet.jpg" height="500"/><br/>
+      <sub>Worksheet with Safety Considerations</sub>
+    </td>
+    <td align="left">
       <img src="https://drive.google.com/uc?export=view&id=1FBSW3lr7R54ivPd10oHFcix1jGrYfYk6" height="500"/><br/>
       <sub>Image of Model Sorting System Programmed</sub>
     </td>
