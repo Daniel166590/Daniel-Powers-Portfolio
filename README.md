@@ -52,18 +52,18 @@ I'm passionate about applying the knowledge gained through my Computer Science M
 <table>
   <tr>
     <td align="center">
-      <video width="200" controls>
+      <video width="300" controls>
         <source src="assets/line_following_demo1.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video><br/>
       <sub>Line-following demo: obstacle course test</sub>
     </td>
     <td align="center">
-      <img src="assets/line_following_schematic.png" width="200"/><br/>
-      <sub>Wiring schematic for sensor array</sub>
+      <img src="https://drive.google.com/uc?export=view&id=1gVb6Ot8ZYndT0JbEB1qBR6jgGMwUvegA" width="400"/><br/>
+      <sub>Hand Drawn Logic for Boolean Based LineFollowing Approach</sub>
     </td>
     <td align="center">
-      <video width="200" controls>
+      <video width="300" controls>
         <source src="assets/line_following_demo2.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video><br/>
