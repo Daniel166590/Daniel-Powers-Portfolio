@@ -1,5 +1,3 @@
-# Daniel Powers – Portfolio
-
 Hi, I’m Daniel Powers, a Computer Science undergraduate at Middle Tennessee State University (MTSU). I will graduate in Summer 2025 with minors in Engineering Technology and Audio Production.
 
 What began as a love for software and problem-solving evolved into a passion for intelligent hardware-software systems. Through hands-on experience with platforms like Arduino and Siemens PLCs, I discovered how rewarding it is to build embedded systems that respond to the real world — systems that don’t just compute, but interact. That realization drove me to accelerate graduation and pursue embedded computing with clarity and urgency.
