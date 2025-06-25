@@ -179,9 +179,9 @@ void move(int direction, int speed){
 - CSCI 3240: Introduction to Computer Systems  
 - CSCI 4160: Compiler Design and Software Development  
 - CSCI 4250: Computer Graphics  
-- CSCI 4560: Database Management Systems  
+- CSCI 4560: Database Management Systems
 - CSCI 4700: Software Engineering  
-- CSCI 4900: Selected Topics in CS (Summer 2025)
+- CSCI 4900: Selected Topics in CS
 
 **Mathematics & Science (Supporting CS)**  
 - MATH 1910: Calculus I  
@@ -194,8 +194,8 @@ void move(int direction, int speed){
 **Engineering Technology (Minor – GPA: 4.0)**  
 - ET 3601: Electrical Circuit Analysis I  
 - ET 3602: Electrical Circuit Analysis II  
-- ET 4600: Programmable Logic Controllers (In Progress)  
-- ET 4860: Robotics (In Progress)  
+- ET 4600: Programmable Logic Controllers
+- ET 4860: Robotics
 - ET 3610: Intro to Electricity & Electronics (In Progress)  
 - ENGR 1100: Engineering Fundamentals  
 
