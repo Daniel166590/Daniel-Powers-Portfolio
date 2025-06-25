@@ -22,8 +22,8 @@ I’m preparing to begin an M.S. in Computer Engineering at the University of Te
 
 ### Additional Information
 - [Leadership & Involvement](#leadership--involvement)
-- [Resume & CV](#-resume--cv)
-- [Contact](#-contact)
+- [Resume & CV](#resume--cv)
+- [Contact](#contact)
 
 ## Featured Projects
 
