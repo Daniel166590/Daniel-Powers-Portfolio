@@ -115,7 +115,7 @@ void move(int direction, int speed){
 - Built and tested on a **Makeblock Ultimate Kit** platform.
 - Experimented with logic for **junction loss**, **sharp turns**, and **intersection control**.
 
-> [View Arduino Code (LineFollower.ino)](RoboticsMedia/ArduinoCode/LineFollower.ino)
+> [View Arduino Code (LineFollower.ino) on GitHub](https://github.com/Daniel166590/Daniel-Powers-Portfolio/blob/main/RoboticsMedia/ArduinoCode/LineFollower.ino)
 
 ---
 
