@@ -53,7 +53,7 @@ I'm passionate about applying the knowledge gained through my Computer Science M
   <tr>
     <td align="center">
       <video width="300" controls>
-        <source src="assets/line_following_demo1.mp4" type="video/mp4">
+        <source src="RoboticsMedia/LineFollowingTest.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video><br/>
       <sub>Line-following demo: obstacle course test</sub>
@@ -64,7 +64,7 @@ I'm passionate about applying the knowledge gained through my Computer Science M
     </td>
     <td align="center">
       <video width="300" controls>
-        <source src="assets/line_following_demo2.mp4" type="video/mp4">
+        <source src="RoboticsMedia/ClimbingTest.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video><br/>
       <sub>Line-following demo: calibration test</sub>
