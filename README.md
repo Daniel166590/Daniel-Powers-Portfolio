@@ -72,7 +72,7 @@ I'm passionate about applying the knowledge gained through my Computer Science M
 void move(int direction, int speed){
   int leftSpeed = 0;
   int rightSpeed = 0;
-  
+
   if (direction == 1) { // Right
     leftSpeed = -1 * speed;
     rightSpeed = speed;
@@ -86,13 +86,12 @@ void move(int direction, int speed){
     leftSpeed = -1 * speed;
     rightSpeed = -1 * speed;
   }
-  
+
   Encoder_1.setTarPWM(leftSpeed);
   Encoder_2.setTarPWM(rightSpeed * 1.20);
 }
 ```
 </pre>
-
 
 - Developed a sensor-driven navigation algorithm on Arduino IDE using IR reflectance sensors.
 - Implemented calibration to correct motor outputs and sensor edge detection errors.
