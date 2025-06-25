@@ -201,6 +201,8 @@ void move(int direction, int speed){
 - ET 3610: Intro to Electricity & Electronics (In Progress)  
 - ENGR 1100: Engineering Fundamentals  
 
+---
+
 **Applied Ethics & Communication**  
 - PHIL 3170: Ethics and Computing Technology  
 - COMM 2200: Fundamentals of Communication
