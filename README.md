@@ -86,6 +86,7 @@ void move(int direction, int speed){
     rightSpeed = -1 * speed;
   }
 
+  // Motor Drift Correction
   Encoder_1.setTarPWM(leftSpeed);
   Encoder_2.setTarPWM(rightSpeed * 1.20);
 }
