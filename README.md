@@ -1,5 +1,3 @@
-# Daniel Powers – Portfolio
-
 Hi, I’m Daniel Powers, a Computer Science undergraduate at Middle Tennessee State University (MTSU). I will graduate in Summer 2025 with minors in Engineering Technology and Audio Production.
 
 What began as a love for software and problem-solving evolved into a passion for intelligent hardware-software systems. Through hands-on experience with platforms like Arduino and Siemens PLCs, I discovered how rewarding it is to build embedded systems that respond to the real world — systems that don’t just compute, but interact. That realization drove me to accelerate graduation and pursue embedded computing with clarity and urgency.
@@ -21,6 +19,7 @@ I’m preparing to begin an M.S. in Computer Engineering at the University of Te
 - [Student Parking App (JavaFX)](#student-parking-app-javafx)
 
 ### Additional Information
+- [Relevant Coursework](#relevant-coursework)
 - [Leadership & Involvement](#leadership--involvement)
 - [Resume & CV](#resume--cv)
 - [Contact](#contact)
@@ -116,7 +115,7 @@ void move(int direction, int speed){
 - Built and tested on a **Makeblock Ultimate Kit** platform.
 - Experimented with logic for **junction loss**, **sharp turns**, and **intersection control**.
 
-> [View Arduino Code (LineFollower.ino)](RoboticsMedia/ArduinoCode/LineFollower.ino)
+> [View Arduino Code (LineFollower.ino) on GitHub](https://github.com/Daniel166590/Daniel-Powers-Portfolio/blob/main/RoboticsMedia/ArduinoCode/LineFollower.ino)
 
 ---
 
@@ -143,7 +142,7 @@ void move(int direction, int speed){
 - Integrated color and metal detection sensors.
 - Programmed safety features and classification logic with ladder diagrams.
 
-> _*Screenshots of ladder logic or photos of the build are ideal here*_
+> [View Full Sorting Ladder Logic (SortingLadder)](PLCMedia/SortingLadder.pdf)
 
 ---
 
@@ -165,6 +164,44 @@ void move(int direction, int speed){
 ### Student Parking App (JavaFX)
 - The JavaFX app will assist students in locating permitted campus lots based on their parking pass and class locations.
 - Includes GUI design and input handling.
+
+---
+
+## Relevant Coursework
+
+**Computer Science (Major – GPA: 4.0)**  
+- CSCI 1170: Computer Science I  
+- CSCI 2170: Computer Science II  
+- CSCI 3080: Discrete Structures  
+- CSCI 3110: Algorithms and Data Structures  
+- CSCI 3130: Assembly and Computer Organization  
+- CSCI 3210: Theory of Programming Languages  
+- CSCI 3240: Introduction to Computer Systems  
+- CSCI 4160: Compiler Design and Software Development  
+- CSCI 4250: Computer Graphics  
+- CSCI 4560: Database Management Systems
+- CSCI 4700: Software Engineering  
+- CSCI 4900: Selected Topics in CS
+
+**Mathematics & Science (Supporting CS)**  
+- MATH 1910: Calculus I  
+- MATH 1920: Calculus II  
+- MATH 2050: Probability and Statistics  
+- MATH 3110: Calculus III (In Progress)  
+- PHYS 2111/2121: Calculus-Based Physics I & II  
+- CHEM 1110: General Chemistry I (In Progress)
+
+**Engineering Technology (Minor – GPA: 4.0)**  
+- ET 3601: Electrical Circuit Analysis I  
+- ET 3602: Electrical Circuit Analysis II  
+- ET 4600: Programmable Logic Controllers
+- ET 4860: Robotics
+- ET 3610: Intro to Electricity & Electronics (In Progress)  
+- ENGR 1100: Engineering Fundamentals  
+
+**Applied Ethics & Communication**  
+- PHIL 3170: Ethics and Computing Technology  
+- COMM 2200: Fundamentals of Communication
 
 ---
 
