@@ -13,21 +13,21 @@
     <div id="mobile-index">
         <!-- ... -->
         <ul>
-            <li><strong>Embedded Systems &amp; Engineering Projects</strong>
+            <li><strong><a href="#engineering-projects">Embedded Systems &amp; Engineering Projects</a></strong>
                 <ul>
                     <li><a href="#led">LED Driver Optimization for Agricultural Systems</a></li>
                     <li><a href="#line-following">Autonomous Line-Following Robot</a></li>
                     <li><a href="#plc">PLC Conveyor System</a></li>
                 </ul>
             </li>
-            <li><strong>Computer Science &amp; Software Projects</strong>
+            <li><strong><a href="#software-projects">Computer Science &amp; Software Projects</a></strong>
                 <ul>
                     <li><a href="#mooflixz">Mooflixz: Full-Stack Music Web App</a></li>
                     <li><a href="#study-app">MTSU Study App</a></li>
                     <li><a href="#parking-app">Student Parking App</a></li>
                 </ul>
             </li>
-            <li><strong>Additional Information</strong>
+            <li><strong><a href="#additional-information">Additional Information</a></strong>
                 <ul>
                     <li><a href="#coursework">Relevant Coursework</a></li>
                     <li><a href="#leadership">Leadership &amp; Involvement</a></li>
@@ -43,7 +43,7 @@
             <!-- ...index content... -->
             <h2>Index</h2>
             <ul>
-                <li><strong>Embedded Systems &amp; Engineering Projects</strong>
+                <li><strong><a href="#engineering-projects">Embedded Systems &amp; Engineering Projects</a></strong>
                     <ul>
                         <li><a href="#led">LED Driver Optimization for Agricultural Systems</a></li>
                         <li><a href="#line-following">Autonomous Line-Following Robot</a></li>
@@ -77,7 +77,8 @@
                 <p>I’m preparing to begin an M.S. in Computer Engineering at the University of Tennessee, Knoxville (UTK). I aim to contribute to sustainable, human-centered technologies — from intelligent robotics to assistive devices. This portfolio showcases the work that shaped that path: from low-level motor control to lighting system diagnostics, from practical logic design to research-driven circuit optimization.</p>
 
                 <hr>
-                <h2 id="led">LED Driver Optimization for Agricultural Systems</h2>
+                <h2 id="engineering-projects">Embedded Systems &amp; Engineering Projects</h2>
+                <h3 id="led">LED Driver Optimization for Agricultural Systems</h3>
                 <p><strong>Role:</strong> Undergraduate Researcher, Smart Sensing and Robotics Lab</p>
                 <div class="image-flex">
                     <figure>
@@ -101,7 +102,7 @@
                 <p><a href="https://github.com/Daniel166590/Daniel-Powers-Portfolio/tree/main/docs/LabMedia" target="_blank">See More Images with Github</a></p>
 
                 <hr>
-                <h2 id="line-following">Autonomous Line-Following Robot</h2>
+                <h3 id="line-following">Autonomous Line-Following Robot</h3>
                 <div class="image-flex">
                     <figure>
                         <img src="RoboticsMedia/LineFollowingTest.gif" alt="Line-following Robot: Demo" />
@@ -208,6 +209,21 @@ void move(int direction, int speed){
     document.getElementById('image-fullscreen-overlay').addEventListener('click', function() {
         this.classList.remove('active');
         document.getElementById('image-fullscreen-img').src = '';
+    });
+    </script>
+    <script>
+    document.querySelectorAll('#desktop-index a[href^="#"], #mobile-index a[href^="#"]').forEach(link => {
+        link.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href').slice(1);
+            const target = document.getElementById(targetId);
+            if (target) {
+                e.preventDefault();
+                // Adjust this value for your preferred offset (e.g., 32 for 2rem, 64 for 4rem)
+                const offset = 20; // px
+                const y = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                window.scrollTo({ top: y, behavior: 'smooth' });
+            }
+        });
     });
     </script>
 </body>

@@ -21,6 +21,12 @@ h1, h2, h3 {
     color: #005a9c;
 }
 
+h2 {
+    text-align: center;
+    font-variant: bold;
+    color:rgb(0, 0, 0)
+}
+
 a {
     color: #0066cc;
     text-decoration: none;
@@ -217,6 +223,11 @@ pre {
     color: #222;
     opacity: 0.92;
 }
+/* Make only the "Embedded Systems & Engineering Projects" link black in the index */
+#desktop-index a[href="#engineering-projects"] {
+    color: #111 !important;
+    font-weight: bold;
+}
 
 /* ====== MAIN CONTENT GLASS PANEL ====== */
 .glass-panel {
@@ -245,6 +256,11 @@ pre {
 #mobile-index,
 #mobile-index-toggle {
     display: none;
+}
+
+#mobile-index a[href="#engineering-projects"] {
+    color: #111 !important;
+    font-weight: bold;
 }
 
 @media (max-width: 85rem) {
