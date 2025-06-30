@@ -32,16 +32,16 @@ I’m preparing to begin an M.S. in Computer Engineering at the University of Te
 <table align="center">
   <tr>
     <td align="left">
-      <img src="https://drive.google.com/uc?export=view&id=1o5zPUO9yLZ1aoUgBqBw1UqlsNnoC6b7N" height="500"/><br/>
+      <img src="LabMedia/TowingTest.jpeg" height="500"/><br/>
       <sub>MTSU LED lighting Cart Towing Test</sub>
     </td>
     <td align="left">
-      <img src="https://drive.google.com/uc?export=view&id=1LnHfMln0io7sbPcEEn78E4MWbMlL5nxO" height="500"/><br/>
+      <img src="LabMedia/WiringDiagram.jpg" height="500"/><br/>
       <sub>Custom drawn wiring schematic for LED panel</sub>
     </td>
     <td align="left">
-      <img src="https://drive.google.com/uc?export=view&id=1jLtY4lpJvehEIwqqLKWrmPeQKWra7jTE" height="500"/><br/>
-      <sub>Illuminated MTSU lighting system during night testing</sub>
+      <img src="LabMedia/TemperatureTest.jpg" height="500"/><br/>
+      <sub>Illuminated MTSU Lighting System During Night Temperature Testing</sub>
     </td>
   </tr>
 </table>
