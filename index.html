@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daniel Powers – Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Mobile Index Elements -->
+    <button id="mobile-index-toggle">☰ Index</button>
+    <div id="mobile-index">
+        <!-- ... -->
+        <ul>
+            <li><strong>Embedded Systems &amp; Engineering Projects</strong>
+                <ul>
+                    <li><a href="#led">LED Driver Optimization for Agricultural Systems</a></li>
+                    <li><a href="#line-following">Autonomous Line-Following Robot</a></li>
+                    <li><a href="#plc">PLC Conveyor System with Part Classification</a></li>
+                </ul>
+            </li>
+            <li><strong>Computer Science &amp; Software Projects</strong>
+                <ul>
+                    <li><a href="#mooflixz">Mooflixz: Full-Stack Music Web App</a></li>
+                    <li><a href="#study-app">MTSU Study App</a></li>
+                    <li><a href="#parking-app">Student Parking App</a></li>
+                </ul>
+            </li>
+            <li><strong>Additional Information</strong>
+                <ul>
+                    <li><a href="#coursework">Relevant Coursework</a></li>
+                    <li><a href="#leadership">Leadership &amp; Involvement</a></li>
+                    <li><a href="#resume">Resume &amp; CV</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="page-wrapper">
+        <aside id="desktop-index">
+            <!-- ...index content... -->
+            <h2>Index</h2>
+            <ul>
+                <li><strong>Embedded Systems &amp; Engineering Projects</strong>
+                    <ul>
+                        <li><a href="#led">LED Driver Optimization for Agricultural Systems</a></li>
+                        <li><a href="#line-following">Autonomous Line-Following Robot</a></li>
+                        <li><a href="#plc">PLC Conveyor System with Part Classification</a></li>
+                    </ul>
+                </li>
+                <li><strong>Computer Science &amp; Software Projects</strong>
+                    <ul>
+                        <li><a href="#mooflixz">Mooflixz: Full-Stack Music Web App</a></li>
+                        <li><a href="#study-app">MTSU Study App</a></li>
+                        <li><a href="#parking-app">Student Parking App</a></li>
+                    </ul>
+                </li>
+                <li><strong>Additional Information</strong>
+                    <ul>
+                        <li><a href="#coursework">Relevant Coursework</a></li>
+                        <li><a href="#leadership">Leadership &amp; Involvement</a></li>
+                        <li><a href="#resume">Resume &amp; CV</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </aside>
+
+        <div class="glass-panel">
+            <main class="main-content">
+                <!-- ...main content... -->
+                <h1>Daniel Powers – Portfolio</h1>
+                <p>Hi, I’m Daniel Powers, a Computer Science undergraduate at Middle Tennessee State University (MTSU). I will graduate in Summer 2025 with minors in Engineering Technology and Audio Production.</p>
+                <p>What began as a love for software and problem-solving evolved into a passion for intelligent hardware-software systems. Through hands-on experience with platforms like Arduino and Siemens PLCs, I discovered how rewarding it is to build embedded systems that respond to the real world — systems that don’t just compute, but interact. That realization drove me to accelerate graduation and pursue embedded computing with clarity and urgency.</p>
+                <p>I’m preparing to begin an M.S. in Computer Engineering at the University of Tennessee, Knoxville (UTK). I aim to contribute to sustainable, human-centered technologies — from intelligent robotics to assistive devices. This portfolio showcases the work that shaped that path: from low-level motor control to lighting system diagnostics, from practical logic design to research-driven circuit optimization.</p>
+
+                <hr>
+                <h2 id="led">LED Driver Optimization for Agricultural Systems</h2>
+                <p><strong>Role:</strong> Undergraduate Researcher, Smart Sensing and Robotics Lab</p>
+                <div class="image-flex">
+                    <figure>
+                        <img src="LabMedia/TowingTest.jpg" alt="LED Cart Towing Test with Towing Bot" />
+                        <figcaption>LED Cart Towing Test with Towing Bot</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="LabMedia/InvolvingHighSchool.jpg" alt="Mentoring High School Students" />
+                        <figcaption>Mentoring High School Students</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="LabMedia/TemperatureTest.jpg" alt="LED System During Night Temperature Testing" />
+                        <figcaption>LED System During Night Temperature Testing</figcaption>
+                    </figure>
+                </div>
+                <ul>
+                    <li>Designed and tested an active cooling system that <strong>reduced LED array temperatures by over 50%</strong>.</li>
+                    <li>Identified and resolved electrical faults, including surge current events, incorrect fuse ratings, and driver instability.</li>
+                    <li>Created modular schematics and documented research procedures and test results for lab continuity.</li>
+                </ul>
+                <p><a href="https://drive.google.com/drive/folders/1V1oGmuduu4vE4Lxfo83EEtWq45R1BIOt?usp=sharing" target="_blank">Browse Full Research Archive on Google Drive</a></p>
+
+                <hr>
+                <h2 id="line-following">Autonomous Line-Following Robot</h2>
+                <div class="image-flex">
+                    <figure>
+                        <img src="RoboticsMedia/LineFollowingTest.gif" alt="Line-following Robot: Demo" />
+                        <figcaption>Line-following Robot: Demo</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="RoboticsMedia/BooleanLineFollowing.jpg" alt="Boolean Based Line-following Approach" />
+                        <figcaption>Boolean Based Line-following Approach</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="RoboticsMedia/ClimbingTest.gif" alt="Line-Following Robot: Climbing Test" />
+                        <figcaption>Line-Following Robot: Climbing Test</figcaption>
+                    </figure>
+                </div>
+                <pre><code class="language-cpp">
+// Basic snippet from line-following robot
+void move(int direction, int speed){
+    int leftSpeed = 0;
+    int rightSpeed = 0;
+    if (direction == 1) { // Right
+        leftSpeed = -1 * speed;
+        rightSpeed = speed;
+    } else if (direction == 2) { // Left
+        leftSpeed = speed;
+        rightSpeed = -1 * speed;
+    } else if (direction == 3) { // Forwards
+        leftSpeed = speed;
+        rightSpeed = speed;
+    } else if (direction == 4) { // Backwards
+        leftSpeed = -1 * speed;
+        rightSpeed = -1 * speed;
+    }
+    Encoder_1.setTarPWM(leftSpeed);
+    Encoder_2.setTarPWM(rightSpeed * 1.20);
+}
+                </code></pre>
+                <ul>
+                    <li>Developed a <strong>sensor-driven navigation algorithm</strong> on Arduino IDE using <strong>IR reflectance sensors</strong>.</li>
+                    <li>Implemented <strong>motor calibration</strong> and <strong>sensor edge detection error correction</strong>.</li>
+                    <li>Tested on a <strong>Makeblock Ultimate Kit</strong> platform.</li>
+                    <li>Experimented with logic for <strong>junction loss</strong>, <strong>sharp turns</strong>, and <strong>intersection control</strong>.</li>
+                </ul>
+                <p><a href="https://github.com/Daniel166590/Daniel-Powers-Portfolio/blob/main/RoboticsMedia/ArduinoCode/LineFollower.ino" target="_blank">View Arduino Code (LineFollower.ino) on GitHub</a></p>
+
+                <section id="plc">
+                    <h3>PLC Conveyor System with Part Classification</h3>
+                    <div class="image-flex">
+                        <figure>
+                            <img src="PLCMedia/SortingStationWorksheet.jpg" alt="Worksheet with Safety Considerations" />
+                            <figcaption>Worksheet with Safety Considerations</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="https://drive.google.com/uc?export=view&id=1FBSW3lr7R54ivPd10oHFcix1jGrYfYk6" alt="Image of Model Sorting System Programmed" />
+                            <figcaption>Image of Model Sorting System Programmed</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="PLCMedia/SortingLadder1.jpg" alt="Image 1 of Ladder Logic" />
+                            <figcaption>Image 1 of Ladder Logic</figcaption>
+                        </figure>
+                    </div>
+                    <ul>
+                        <li>Modeled an industrial sorting system using <strong>Siemens S7-1500 PLC</strong> and <strong>TIA Portal</strong>.</li>
+                        <li>Integrated color and metal detection sensors.</li>
+                        <li>Programmed safety features and classification logic with ladder diagrams.</li>
+                    </ul>
+                    <p><a href="PLCMedia/SortingLadder.pdf" target="_blank">View Full Sorting Ladder Logic (SortingLadder)</a></p>
+                </section>
+            </main>
+        </div>
+    </div>
+    <div id="image-fullscreen-overlay">
+        <img id="image-fullscreen-img" src="" alt="Full size image" />
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+        const toggleButton = document.getElementById('mobile-index-toggle');
+        const mobileIndex = document.getElementById('mobile-index');
+        toggleButton.addEventListener('click', () => {
+            mobileIndex.classList.toggle('open');
+        });
+
+        // Hide mobile index when any link inside it is clicked
+        mobileIndex.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileIndex.classList.remove('open');
+            });
+        });
+    </script>
+    <script>
+    document.querySelectorAll('.image-flex img').forEach(img => {
+        img.style.cursor = 'zoom-in';
+        img.addEventListener('click', function() {
+            const overlay = document.getElementById('image-fullscreen-overlay');
+            const overlayImg = document.getElementById('image-fullscreen-img');
+            overlayImg.src = this.src;
+            overlayImg.alt = this.alt || '';
+            overlay.classList.add('active');
+        });
+    });
+    document.getElementById('image-fullscreen-overlay').addEventListener('click', function() {
+        this.classList.remove('active');
+        document.getElementById('image-fullscreen-img').src = '';
+    });
+    </script>
+</body>
+</html>
