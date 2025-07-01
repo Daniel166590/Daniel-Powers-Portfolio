@@ -27,6 +27,10 @@ h2 {
     color:rgb(0, 0, 0)
 }
 
+h3 {
+    font-size: 1.3rem;
+}
+
 a {
     color: #0066cc;
     text-decoration: none;
