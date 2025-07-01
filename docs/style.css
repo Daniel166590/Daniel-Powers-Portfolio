@@ -132,6 +132,43 @@ pre {
     transition: box-shadow 0.3s, background 0.3s;
 }
 
+.video-links-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 2rem 0;
+    gap: 2rem;
+}
+
+.video-links-row a {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #005a9c;
+    background: rgba(255,255,255,0.32);
+    padding: 1rem 2rem;
+    border-radius: 18px;
+    box-shadow: 0 2px 12px 0 rgba(31,38,135,0.10);
+    text-align: center;
+    text-decoration: none;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+
+.video-links-row a:hover {
+    background: rgba(255,255,255,0.5);
+    box-shadow: 0 4px 24px 0 rgba(31,38,135,0.18);
+    text-decoration: underline;
+}
+
+.video-links-row.single-link {
+    justify-content: center;
+}
+
+.video-links-row.single-link a {
+    flex: 0 1 60vw; /* Make the link wider, but not full width */
+    text-align: center;
+}
+
 /* ====== LAYOUT: GRID FOR 1/3 + 2/3 SPLIT ====== */
 .page-wrapper {
     display: grid;
