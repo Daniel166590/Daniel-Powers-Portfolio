@@ -147,11 +147,12 @@ pre {
 
 .video-links-row a {
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 0.85rem;
     color: #005a9c;
     background: rgba(255,255,255,0.32);
-    padding: 1rem 2rem;
+    padding: 0.5rem 1rem;
     border-radius: 18px;
+    flex: 1 1 auto; /* Allow links to grow and shrink */
     box-shadow: 0 2px 12px 0 rgba(31,38,135,0.10);
     text-align: center;
     text-decoration: none;
@@ -264,8 +265,15 @@ pre {
     color: #222;
     opacity: 0.92;
 }
-/* Make only the "Embedded Systems & Engineering Projects" link black in the index */
-#desktop-index a[href="#engineering-projects"] {
+/* Make index section headers black and bolded */
+#mobile-index a[href="#engineering-projects"],
+#desktop-index a[href="#engineering-projects"],
+#mobile-index a[href="#software-projects"],
+#desktop-index a[href="#software-projects"],
+#mobile-index a[href="#audio-projects"],
+#desktop-index a[href="#audio-projects"],
+#mobile-index a[href="#additional-information"],
+#desktop-index a[href="#additional-information"] {
     color: #111 !important;
     font-weight: bold;
 }
@@ -297,11 +305,6 @@ pre {
 #mobile-index,
 #mobile-index-toggle {
     display: none;
-}
-
-#mobile-index a[href="#engineering-projects"] {
-    color: #111 !important;
-    font-weight: bold;
 }
 
 @media (max-width: 85rem) {
