@@ -30,7 +30,6 @@
                 <ul>
                     <li><a href="#darrel">"Darrel" Sound Design</a></li>
                     <li><a href="#caminandes">"Caminandes" Foley & Mixing</a></li>
-                    <li><a href="#guacafoly">"Guacafoly" Foley & Mixing</a></li>
                 </ul>
             </li>
             <li><strong><a href="#additional-information">Additional Information</a></strong>
@@ -66,7 +65,6 @@
                     <ul>
                         <li><a href="#darrel">"Darrel" Sound Design</a></li>
                         <li><a href="#caminandes">"Caminandes" Foley & Mixing</a></li>
-                        <li><a href="#guacafoly">"Guacafoly" Foley & Mixing</a></li>
                     </ul>
                 </li>
                 <li><strong><a href="#additional-information">Additional Information</a></strong>
@@ -271,7 +269,7 @@ void move(int direction, int speed){
                 <hr>
                 <h2 id="audio-projects">Audio Production Projects</h2>
                 
-                <h3 id="darrel">Sound Design & Music Remastering for "Darrel" (Academic Only)</h3>
+                <h3 id="darrel">Audio Mixing with Sound & Music design for "Darrel" (Academic Only)</h3>
                 <div class="video-demo" id="darrel-container">
                     <video
                         id="darrel-video"
@@ -284,14 +282,13 @@ void move(int direction, int speed){
                         <source src="AudioProduction/APDarrel.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
-                    <p id="darrel-description" style="opacity:0;transition:opacity 0.3s ease;">Sound Design & Music Remastering Showcase</p>
+                    <p id="darrel-description" style="opacity:0;transition:opacity 0.3s ease;">Audio Mixing & Sound Design Showcase</p>
                     <button id="darrel-mute-toggle" class="mute-btn" type="button">🔇 Unmute Video</button>
                 </div>
                 <ul>
-                    <li><strong>Remastered and enhanced</strong> original music tracks for improved clarity and dynamic range.</li>
-                    <li><strong>Designed and implemented</strong> custom sound effects to enhance storytelling and atmosphere.</li>
-                    <li><strong>Applied advanced audio processing</strong> techniques including EQ, compression, and spatial audio effects.</li>
-                    <li><strong>Collaborated with creative team</strong> to ensure audio elements aligned with project vision and narrative flow.</li>
+                    <li><strong>Voted Best Audio Design</strong> by leading professor and showcased as a <strong>standout project</strong>.</li>
+                    <li><strong>Custom recorded and designed</strong> original sound effects to supplement existing audio assets and enhance storytelling atmosphere.</li>
+                    <li><strong>Applied advanced audio processing</strong> techniques including EQ, reverberation, and spatial audio effects for professional-quality output.</li>
                 </ul>
 
                 <hr>
@@ -316,29 +313,6 @@ void move(int direction, int speed){
                     <li><strong>Designed layered soundscapes</strong> to create immersive audio environments matching visual scenes.</li>
                     <li><strong>Mixed and balanced</strong> multiple audio tracks for optimal clarity and dynamic range.</li>
                     <li><strong>Synchronized audio elements</strong> precisely with visual cues for seamless integration.</li>
-                </ul>
-
-                <hr>
-                <h3 id="guacafoly">Foley Recording, Sound Design, & Mixing for "Guacafoly" (Academic Only)</h3>
-                <div class="video-demo">
-                    <video
-                        id="guacafoly-video"
-                        controls
-                        muted
-                        loop
-                        playsinline
-                        preload="none"
-                        poster="AudioProduction/GuacafolyMedia/GuacafolyDemo.gif"
-                        style="width:100%;max-width:720px;border-radius:18px;box-shadow:0 4px 32px 0 rgba(31,38,135,0.13);background:#111;">
-                        <source src="AudioProduction/GuacafolyMedia/GuacafolyDemo.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <ul>
-                    <li><strong>Created realistic Foley effects</strong> for kitchen and cooking scenes with attention to detail and timing.</li>
-                    <li><strong>Developed custom sound library</strong> of kitchen utensils, food preparation, and ambient cooking sounds.</li>
-                    <li><strong>Applied creative sound design</strong> to enhance comedic timing and visual storytelling.</li>
-                    <li><strong>Delivered final mix</strong> with professional-level audio quality and proper level balancing.</li>
                 </ul>
 
                 <hr>
@@ -590,8 +564,7 @@ void move(int direction, int speed){
             { id: 'mooflixz-video', options: { hasAudio: true, buttonId: 'mute-toggle', descriptionId: 'mooflixz-description' }},
             { id: 'study-app-video', options: { hasAudio: false }},
             { id: 'darrel-video', options: { hasAudio: true, buttonId: 'darrel-mute-toggle', descriptionId: 'darrel-description' }},
-            { id: 'caminandes-video', options: { hasAudio: true, buttonId: 'caminandes-mute-toggle', descriptionId: 'caminandes-description' }},
-            { id: 'guacafoly-video', options: { hasAudio: false }}
+            { id: 'caminandes-video', options: { hasAudio: true, buttonId: 'caminandes-mute-toggle', descriptionId: 'caminandes-description' }}
         ];
         
         function registerNextVideo(index = 0) {
