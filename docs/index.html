@@ -218,19 +218,11 @@ void move(int direction, int speed){
                 <hr>
                 <h2 id="software-projects">Computer Science &amp; Software Projects</h2>
                 <h3 id="mooflixz">Mooflixz: Full-Stack Music Web App</h3>
-                <div class="image-flex">
-                    <figure>
-                        <img src="SoftwareMedia/MooflixzDemo.gif" alt="Mooflixz Demo" />
-                        <figcaption>Mooflixz Demo</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="SoftwareMedia/MooflixzUI.png" alt="Mooflixz User Interface" />
-                        <figcaption>Mooflixz User Interface</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="SoftwareMedia/MooflixzAuth.png" alt="Azure Authentication" />
-                        <figcaption>Azure Authentication</figcaption>
-                    </figure>
+                <div class="video-demo">
+                    <video controls muted loop poster="MooflixzMedia/MooflixzDemo.gif" style="width:100%;max-width:720px;border-radius:18px;box-shadow:0 4px 32px 0 rgba(31,38,135,0.13);background:#111;">
+                        <source src="MooflixzMedia/MooflixzDemo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
                 <ul>
                     <li><strong>Developed</strong> a full-stack music web application using <strong>React</strong>, <strong>Node.js</strong>, and <strong>MySQL</strong>.</li>
@@ -241,9 +233,8 @@ void move(int direction, int speed){
                 </ul>
                 <div class="video-links-row">
                     <a href="DemoVideo" alt="Demo Video">Mooflix Application Demo Video</a>
-                    <a href="PitchVideo" alt="Pitch Video">Mooflix Application Sales Pitch</a>
+                    <a href="https://github.com/Daniel166590/Spring25-Database-Management-Project?tab=readme-ov-file#usage" alt="Github Link">View The Full Project with Github</a>
                 </div>
-
                 <hr>
             </main>
         </div>
@@ -298,6 +289,26 @@ void move(int direction, int speed){
                 window.scrollTo({ top: y, behavior: 'smooth' });
             }
         });
+    });
+    </script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const video = document.querySelector('#mooflixz ~ .video-demo video');
+        if (!video) return;
+
+        // Use Intersection Observer to play video when in view
+        const observer = new IntersectionObserver(
+            (entries, obs) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        video.play();
+                        obs.unobserve(video); // Play only once
+                    }
+                });
+            },
+            { threshold: 0.5 } // Play when at least 50% visible
+        );
+        observer.observe(video);
     });
     </script>
 </body>
