@@ -420,12 +420,29 @@ void move(int direction, int speed){
                             const video = entry.target;
                             const state = videoStates.get(video);
                             if (state) {
-                                state.isIntersecting = entry.isIntersecting;
-                                handleVideoPlayback(video, state);
+                                // Calculate how much of the video is visible
+                                const visibilityRatio = entry.intersectionRatio;
+                                
+                                // Load video when 50% visible, play when 100% visible
+                                if (visibilityRatio >= 0.5 && !state.hasLoaded) {
+                                    // Preload the video metadata and some content
+                                    video.preload = 'metadata';
+                                    video.load();
+                                    state.hasLoaded = true;
+                                }
+                                
+                                // Only consider it "intersecting" for playback when 100% visible
+                                const wasIntersecting = state.isIntersecting;
+                                state.isIntersecting = visibilityRatio >= 0.95; // 95% to account for rounding
+                                
+                                // Only trigger playback changes if intersection state changed
+                                if (wasIntersecting !== state.isIntersecting) {
+                                    handleVideoPlayback(video, state);
+                                }
                             }
                         });
                     },
-                    { threshold: 0.5 }
+                    { threshold: [0, 0.5, 0.95, 1.0] } // Multiple thresholds for precise control
                 );
             }
             return globalObserver;
@@ -458,7 +475,7 @@ void move(int direction, int speed){
         }
         
         function handleVideoPlayback(video, state) {
-            if (state.isIntersecting && hasFocus) {
+            if (state.isIntersecting && hasFocus && state.hasLoaded) {
                 pauseOtherVideos(video);
                 
                 if (state.hasAudio) {
@@ -512,6 +529,7 @@ void move(int direction, int speed){
                 hasAudio,
                 userLatchedMute: false,
                 hasAutoplayed: false,
+                hasLoaded: false,
                 unmuteTimeout: null
             };
             
