@@ -219,10 +219,12 @@ void move(int direction, int speed){
                 <h2 id="software-projects">Computer Science &amp; Software Projects</h2>
                 <h3 id="mooflixz">Mooflixz: Full-Stack Music Web App</h3>
                 <div class="video-demo">
-                    <video controls muted loop poster="MooflixzMedia/MooflixzDemo.gif" style="width:100%;max-width:720px;border-radius:18px;box-shadow:0 4px 32px 0 rgba(31,38,135,0.13);background:#111;">
+                    <video id="mooflixz-video" controls muted loop poster="MooflixzMedia/MooflixzDemo.gif" style="width:100%;max-width:720px;border-radius:18px;box-shadow:0 4px 32px 0 rgba(31,38,135,0.13);background:#111;">
                         <source src="MooflixzMedia/MooflixzDemo.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
+                    <p>Sound to Showcase Playback Enabled by the Youtube API</p>
+                    <button id="mute-toggle" class="mute-btn" type="button">🔇 Unmute Video</button>
                 </div>
                 <ul>
                     <li><strong>Developed</strong> a full-stack music web application using <strong>React</strong>, <strong>Node.js</strong>, and <strong>MySQL</strong>.</li>
@@ -231,8 +233,7 @@ void move(int direction, int speed){
                     <li><strong>Designed</strong> a <strong>responsive UI</strong> with <strong>Material-UI</strong> and integrated a <strong>custom audio player</strong>.</li>
                     <li><strong>Participated</strong> in weekly presentations to show progress.</li>
                 </ul>
-                <div class="video-links-row">
-                    <a href="DemoVideo" alt="Demo Video">Mooflix Application Demo Video</a>
+                <div class="video-links-row single-link">
                     <a href="https://github.com/Daniel166590/Spring25-Database-Management-Project?tab=readme-ov-file#usage" alt="Github Link">View The Full Project with Github</a>
                 </div>
                 <hr>
@@ -283,7 +284,6 @@ void move(int direction, int speed){
             const target = document.getElementById(targetId);
             if (target) {
                 e.preventDefault();
-                // Adjust this value for your preferred offset (e.g., 32 for 2rem, 64 for 4rem)
                 const offset = 20; // px
                 const y = target.getBoundingClientRect().top + window.pageYOffset - offset;
                 window.scrollTo({ top: y, behavior: 'smooth' });
@@ -293,22 +293,93 @@ void move(int direction, int speed){
     </script>
     <script>
     document.addEventListener("DOMContentLoaded", function() {
-        const video = document.querySelector('#mooflixz ~ .video-demo video');
-        if (!video) return;
+        const video = document.getElementById('mooflixz-video');
+        const btn = document.getElementById('mute-toggle');
+        if (!video || !btn) return;
 
-        // Use Intersection Observer to play video when in view
-        const observer = new IntersectionObserver(
-            (entries, obs) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        video.play();
-                        obs.unobserve(video); // Play only once
+        video.volume = 0.6
+
+        let isIntersecting = false;
+        let userLatchedMute = false;
+        let hasAutoplayed = false;
+        let userInteracted = false;
+        let unmuteTimeout = null;
+
+        function updateButton() {
+            btn.textContent = video.muted ? "🔇 Unmute Video" : "🔊 Mute Video";
+        }
+
+        btn.addEventListener('click', function() {
+            video.muted = !video.muted;
+            userLatchedMute = video.muted;
+            updateButton();
+            if (!video.paused) video.play();
+        });
+
+        video.addEventListener('volumechange', function() {
+            userLatchedMute = video.muted;
+            updateButton();
+        });
+
+        // Listen for any user interaction to allow unmuting
+        function onUserInteract() {
+            userInteracted = true;
+            document.removeEventListener('click', onUserInteract);
+        }
+        document.addEventListener('click', onUserInteract);
+
+        function handlePlayback() {
+            if (isIntersecting && document.hasFocus()) {
+                if (!hasAutoplayed) {
+                    video.muted = true;
+                    video.play().then(() => {
+                        hasAutoplayed = true;
+                        // Only try to unmute if user has interacted and not latched
+                        if (!userLatchedMute && userInteracted) {
+                            if (unmuteTimeout) clearTimeout(unmuteTimeout);
+                            unmuteTimeout = setTimeout(() => {
+                                if (!userLatchedMute && userInteracted) video.muted = false;
+                            }, 1000);
+                        }
+                    }).catch(() => {
+                        // Autoplay failed, user must interact
+                    });
+                } else {
+                    video.play();
+                    if (!userLatchedMute && userInteracted) {
+                        if (unmuteTimeout) clearTimeout(unmuteTimeout);
+                        unmuteTimeout = setTimeout(() => {
+                            if (!userLatchedMute && userInteracted) video.muted = false;
+                        }, 1000);
                     }
+                }
+            } else {
+                video.pause();
+                if (unmuteTimeout) clearTimeout(unmuteTimeout);
+            }
+        }
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    isIntersecting = entry.isIntersecting;
+                    handlePlayback();
                 });
             },
-            { threshold: 0.5 } // Play when at least 50% visible
+            { threshold: 0.5 }
         );
         observer.observe(video);
+
+        window.addEventListener('blur', () => {
+            video.pause();
+            if (unmuteTimeout) clearTimeout(unmuteTimeout);
+        });
+
+        window.addEventListener('focus', () => {
+            handlePlayback();
+        });
+
+        updateButton();
     });
     </script>
 </body>
