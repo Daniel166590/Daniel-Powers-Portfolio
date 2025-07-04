@@ -1200,10 +1200,11 @@ pre {
 }
 
 .achievement-badges {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
-    justify-content: center;
-    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .badge {
@@ -1251,6 +1252,19 @@ pre {
     color: #0066cc;
     font-size: 0.85rem;
     margin-top: 0.2rem;
+}
+
+/* Responsive design for achievement badges */
+@media (max-width: 768px) {
+    .achievement-badges {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .badge {
+        min-width: unset;
+        width: 100%;
+    }
 }
 
 /* ====== COURSEWORK SECTION VISUAL ENHANCEMENTS ====== */
@@ -1509,6 +1523,96 @@ pre {
     .course-tag {
         font-size: 0.75rem;
         padding: 0.3rem 0.6rem;
+    }
+}
+
+/* ====== RESUME SECTION ====== */
+.resume-section {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 2rem;
+    margin: 1.5rem 0;
+    box-shadow: 0 8px 32px rgba(0, 90, 156, 0.1);
+}
+
+.resume-description {
+    margin-bottom: 1.5rem;
+}
+
+.resume-description p {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+.resume-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.highlight-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.highlight-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 90, 156, 0.15);
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.highlight-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.highlight-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.highlight-content strong {
+    color: #005a9c;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.highlight-content small {
+    color: #666;
+    font-size: 0.85rem;
+}
+
+/* Mobile responsiveness for resume section */
+@media (max-width: 768px) {
+    .resume-section {
+        padding: 1.5rem;
+        margin: 1rem 0;
+    }
+    
+    .resume-highlights {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+    
+    .highlight-item {
+        padding: 0.75rem;
+    }
+    
+    .resume-description p {
+        font-size: 1rem;
     }
 }
 
@@ -1805,7 +1909,7 @@ pre {
 .main-content li:nth-child(2) { animation-delay: 0.2s; }
 .main-content li:nth-child(3) { animation-delay: 0.3s; }
 .main-content li:nth-child(4) { animation-delay: 0.4s; }
-.main-content li:nth-child(5) { animation-delay: 0.5s; }
+.main-content li:nth-child(5) { animation-delay:  0.5s; }
 .main-content li:nth-child(n+6) { animation-delay: 0.6s; }
 
 /* ====== HERO INTRODUCTION STYLING ====== */
@@ -2216,19 +2320,94 @@ pre {
     font-size: 0.85rem;
 }
 
-/* Responsive adjustments for contact section */
+/* Featured Achievement Styles */
+.featured-achievement {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    border: 1.5px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 6px 32px 0 rgba(31, 38, 135, 0.15);
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+}
+
+.featured-achievement:hover {
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 40px 0 rgba(31, 38, 135, 0.2);
+    transform: translateY(-2px);
+}
+
+.achievement-content {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
+    align-items: center;
+}
+
+.badge-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.badge-icon.large {
+    font-size: 3rem;
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 215, 0, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(255, 215, 0, 0.4);
+}
+
+.achievement-image img {
+    max-width: 300px;
+    max-height: 220px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+    cursor: zoom-in;
+}
+
+.image-caption {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    font-style: italic;
+}
+
+/* Other Achievement Badges Row */
+.other-achievement-badges {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-    .contact-grid {
+    .achievement-content {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
+        text-align: center;
     }
     
-    .contact-section {
-        padding: 1.2rem;
+    .other-achievement-badges {
+        grid-template-columns: 1fr;
+        gap: 1rem;
     }
     
-    .contact-item {
-        padding: 0.6rem;
+    .achievement-image img {
+        max-width: 100%;
+        max-height: 280px;
+    }
+    
+    .badge-header {
+        justify-content: center;
     }
 }
 

@@ -13,7 +13,11 @@
     <div id="mobile-index">
         <!-- ... -->
         <ul>
-            <li><strong><a href="#engineering-projects">Embedded Systems &amp; Engineering Projects</a></strong>
+            <li><strong><a href="#engine                <h3 id="resume">Resume & CV</h3>
+                <div class="video-links-row">
+                    <a href="AdditionalInformation/Resume2025b.pdf" target="_blank">📄 View Resume (PDF)</a>
+                    <a href="AdditionalInformation/CV2025a.pdf" target="_blank">📄 View CV (PDF)</a>
+                </div>-projects">Embedded Systems &amp; Engineering Projects</a></strong>
                 <ul>
                     <li><a href="#led">LED Driver Optimization</a></li>
                     <li><a href="#line-following">Line-Following Robot</a></li>
@@ -514,14 +518,33 @@ void move(int direction, int speed){
 
                 <div class="achievements-section">
                     <h4>🏆 Academic Achievements</h4>
-                    <div class="achievement-badges">
-                        <div class="badge">
-                            <span class="badge-icon">🥇</span>
-                            <div class="badge-content">
-                                <strong>1st Place HackMT</strong>
-                                <small>2024 Hackathon</small>
+                    
+                    <!-- Featured HackMT Achievement with Team Photo -->
+                    <div class="featured-achievement">
+                        <div class="achievement-content">
+                            <div class="achievement-text">
+                                <div class="badge-header">
+                                    <span class="badge-icon large">🥇</span>
+                                    <div class="badge-content">
+                                        <strong>1st Place HackMT</strong>
+                                        <small>Spring 2024 Hackathon</small>
+                                        <small style="margin-top: 0.25rem; display: block;">
+                                            <a href="https://mtsunews.com/mtsu-computer-science-hackmt-2024/" target="_blank" style="color: #0066cc; text-decoration: underline; font-weight: 600; transition: all 0.3s ease;" onmouseover="this.style.color='#004d99'; this.style.textDecoration='underline'; this.style.backgroundColor='rgba(0, 102, 204, 0.1)'; this.style.padding='2px 4px'; this.style.borderRadius='4px';" onmouseout="this.style.color='#0066cc'; this.style.backgroundColor='transparent'; this.style.padding='0';">
+                                                📰 Project "Blue Aid" - Read News Article
+                                            </a>
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="achievement-image">
+                                <img src="AdditionalInformation/BlueAidTeam.png" alt="Blue Aid Team - HackMT 2024 Winners" />
+                                <div class="image-caption">Blue Aid Team - HackMT 2024 Winners</div>
                             </div>
                         </div>
+                    </div>
+                    
+                    <!-- Other Achievement Badges in a Row -->
+                    <div class="other-achievement-badges">
                         <div class="badge">
                             <span class="badge-icon">🎓</span>
                             <div class="badge-content">
@@ -536,13 +559,53 @@ void move(int direction, int speed){
                                 <small>Fall 2021 – Present</small>
                             </div>
                         </div>
+                        <div class="badge">
+                            <span class="badge-icon">💻</span>
+                            <div class="badge-content">
+                                <strong>Computer Science Department Scholarship</strong>
+                                <small>Spring 2025</small>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 <hr>
                 <h3 id="resume">Resume & CV</h3>
-                <div class="video-links-row single-link">
-                    <a href="#" target="_blank">📥 Download My Resume (PDF)</a>
+                
+                <div class="resume-section">
+                    <div class="resume-description">                        
+                        <div class="resume-highlights">
+                            <div class="highlight-item">
+                                <span class="highlight-icon">🎓</span>
+                                <div class="highlight-content">
+                                    <strong>4.0 GPA</strong>
+                                    <small>Across all majors and minors</small>
+                                </div>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-icon">📅</span>
+                                <div class="highlight-content">
+                                    <strong>Summer 2025 Graduate</strong>
+                                    <small>B.S. Computer Science + 2 Minors</small>
+                                </div>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-icon">🔬</span>
+                                <div class="highlight-content">
+                                    <strong>Research Experience</strong>
+                                    <small>Smart Sensing & Robotics Lab</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>A comprehensive overview of my academic journey, technical skills, and 
+                        professional experience. This document includes my complete coursework, 
+                        research projects, leadership roles, and achievements across Computer Science, 
+                        Engineering Technology, and Audio Production.
+                    </p>
+                    <div class="video-links-row single-link">
+                        <a href="AdditionalInformation/Resume2025b.pdf" target="_blank">📄 View Resume/CV (PDF)</a>
+                    </div>
                 </div>
 
                 <hr>
@@ -620,7 +683,7 @@ void move(int direction, int speed){
         });
     </script>
     <script>
-    document.querySelectorAll('.image-flex img').forEach(img => {
+    document.querySelectorAll('.image-flex img, .achievement-image img').forEach(img => {
         img.style.cursor = 'zoom-in';
         img.addEventListener('click', function() {
             const overlay = document.getElementById('image-fullscreen-overlay');
