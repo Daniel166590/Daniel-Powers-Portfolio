@@ -449,8 +449,6 @@ pre {
     transition: all 0.3s ease;
     letter-spacing: 0.3px;
     line-height: 1.5;
-    position: relative;
-    overflow: hidden;
 }
 
 #mooflixz-container #mooflixz-description::before,
@@ -566,6 +564,48 @@ pre {
     .main-content h4.subsection-header::before {
         left: 1rem;
         font-size: 1rem;
+    }
+    
+    /* Remove video container background on small screens for more space */
+    .video-demo {
+        background: none !important;
+        border: none !important;
+        box-shadow: none !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        padding: 1rem 0 !important;
+        margin: 1.5rem 0 !important;
+    }
+    
+    /* Keep video styling but remove container background */
+    .video-demo video {
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
+        border-radius: 12px !important;
+    }
+    
+    /* Remove main glass panel background on small screens for maximum space */
+    .glass-panel {
+        background: none !important;
+        border: none !important;
+        box-shadow: none !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        padding: 1rem 0.5rem !important;
+        margin: 1rem auto 0 auto !important;
+    }
+    
+    /* Make main content use full width on mobile */
+    .main-content {
+        padding: 1rem 1rem !important;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+    
+    /* Ensure page wrapper uses full width */
+    .page-wrapper {
+        max-width: 100% !important;
+        width: 100% !important;
+        padding: 0 !important;
     }
 }
 
@@ -704,7 +744,7 @@ pre {
     }
 }
 
-/* ====== LAYOUT: OPTIMIZED GRID FOR PERFORMANCE ====== */
+/* ====== LAYOUT: GRID FOR 1/3 + 2/3 SPLIT ====== */
 .page-wrapper {
     display: grid;
     grid-template-columns: 25% 75%;
@@ -716,12 +756,6 @@ pre {
     align-items: start;
     gap: 2rem;
     padding: 0 2vw;
-    
-    /* Performance optimizations */
-    contain: layout style; /* Isolate layout calculations */
-    will-change: auto; /* Only when needed */
-    transform: translateZ(0); /* Force GPU layer */
-    
     transition: 
         grid-template-columns 0.4s cubic-bezier(.4,1.2,.6,1),
         padding 0.4s cubic-bezier(.4,1.2,.6,1);
@@ -744,11 +778,6 @@ pre {
     border: 1.5px solid rgba(255, 255, 255, 0.25);
     backdrop-filter: blur(24px) saturate(180%);
     -webkit-backdrop-filter: blur(24px) saturate(180%);
-    
-    /* Performance optimizations that preserve sticky behavior */
-    contain: style; /* Only style containment - layout containment breaks sticky */
-    isolation: isolate; /* Create stacking context without transform issues */
-    
     transition:
         width 0.4s cubic-bezier(.4,1.2,.6,1),
         padding 0.4s cubic-bezier(.4,1.2,.6,1),
@@ -998,9 +1027,9 @@ pre {
     .glass-panel {
         grid-column: 1 / -1;
         border-radius: 24px;      /* Restore rounded corners */
-        max-width: 75vw;         /* or 90vw for flexibility */
+        max-width: 100vw;        /* Full viewport width */
         width: 100%;
-        margin: 3rem auto 0 auto;
+        margin: 0;               /* No margins - use full width */
         padding: 1rem 0.5rem;
         box-sizing: border-box;
     }
@@ -1010,13 +1039,13 @@ pre {
         left: 1rem;
         z-index: 1100;
         background: linear-gradient(135deg, 
-            rgba(231, 76, 60, 0.06) 0%,
-            rgba(241, 196, 15, 0.08) 50%,
-            rgba(52, 152, 219, 0.06) 100%);
-        color: #e74c3c;
+            rgba(52, 152, 219, 0.08) 0%,
+            rgba(41, 128, 185, 0.10) 50%,
+            rgba(30, 139, 195, 0.08) 100%);
+        color: #2980b9;
         padding: 0.5rem 1.2rem;
         border-radius: 16px;
-        border: 1.5px solid rgba(231, 76, 60, 0.2);
+        border: 1.5px solid rgba(52, 152, 219, 0.25);
         box-shadow: 0 4px 16px 0 rgba(31, 38, 135, 0.12);
         backdrop-filter: blur(14px) saturate(160%);
         -webkit-backdrop-filter: blur(14px) saturate(160%);
@@ -1028,10 +1057,10 @@ pre {
     #mobile-index-toggle:active,
     #mobile-index-toggle:focus {
         background: linear-gradient(135deg, 
-            rgba(231, 76, 60, 0.12) 0%,
-            rgba(241, 196, 15, 0.15) 50%,
-            rgba(52, 152, 219, 0.12) 100%);
-        color: #c0392b;
+            rgba(52, 152, 219, 0.15) 0%,
+            rgba(41, 128, 185, 0.18) 50%,
+            rgba(30, 139, 195, 0.15) 100%);
+        color: #1f4e79;
         box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
         outline: none;
     }
@@ -1040,11 +1069,11 @@ pre {
         width: 100vw;
         height: calc(100vh - 3rem);
         background: linear-gradient(135deg, 
-            rgba(231, 76, 60, 0.04) 0%,
-            rgba(230, 126, 34, 0.03) 25%,
-            rgba(241, 196, 15, 0.03) 50%,
-            rgba(46, 204, 113, 0.03) 75%,
-            rgba(52, 152, 219, 0.04) 100%);
+            rgba(52, 152, 219, 0.05) 0%,
+            rgba(41, 128, 185, 0.04) 25%,
+            rgba(30, 139, 195, 0.04) 50%,
+            rgba(25, 118, 210, 0.04) 75%,
+            rgba(21, 101, 192, 0.05) 100%);
         z-index: 1050;
         overflow-y: auto;
         padding: 2rem 1rem;
@@ -1054,7 +1083,7 @@ pre {
         box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
         backdrop-filter: blur(22px) saturate(180%);
         -webkit-backdrop-filter: blur(22px) saturate(180%);
-        border: 1.5px solid rgba(231, 76, 60, 0.15);
+        border: 1.5px solid rgba(52, 152, 219, 0.20);
     }
     #mobile-index > *:first-child {
         margin-top: 5rem; /* adjust as needed */
@@ -1127,11 +1156,6 @@ pre {
     padding: 2rem 2vw;
     max-width: 100%;
     box-sizing: border-box;
-    
-    /* Performance optimizations for content area */
-    contain: layout style; /* Isolate layout changes */
-    transform: translateZ(0); /* Force compositing layer */
-    will-change: auto; /* Only activate when needed */
 }
 
 /* ====== LEADERSHIP & INVOLVEMENT VISUAL ENHANCEMENTS ====== */
@@ -1566,7 +1590,7 @@ pre {
 
 .resume-highlights {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1rem;
     margin-bottom: 1.5rem;
 }
@@ -1614,17 +1638,90 @@ pre {
 /* Mobile responsiveness for resume section */
 @media (max-width: 768px) {
     .resume-section {
-        padding: 1.5rem;
+        padding: 1rem;
         margin: 1rem 0;
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+        box-sizing: border-box;
+        position: relative;
+    }
+    
+    .resume-description {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
     }
     
     .resume-highlights {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
         gap: 0.75rem;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+        box-sizing: border-box;
     }
     
     .highlight-item {
         padding: 0.75rem;
+        margin: 0;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        overflow: hidden;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 0.5rem;
+        position: relative;
+    }
+    
+    .highlight-icon {
+        flex: 0 0 auto;
+        width: 1.5rem;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+    
+    .highlight-content {
+        flex: 1 1 auto;
+        min-width: 0;
+        max-width: 100%;
+        overflow: hidden;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        word-break: break-word;
+        hyphens: auto;
+    }
+    
+    .highlight-content strong,
+    .highlight-content small {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        word-break: break-word;
+        hyphens: auto;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        line-height: 1.3;
+    }
+    
+    .highlight-content strong {
+        font-size: 0.9rem;
+        margin-bottom: 0.2rem;
+    }
+    
+    .highlight-content small {
+        font-size: 0.8rem;
     }
     
     .resume-description p {
@@ -1909,6 +2006,7 @@ pre {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -2424,6 +2522,37 @@ pre {
     
     .badge-header {
         justify-content: center;
+    }
+}
+
+/* ====== MOBILE OVERFLOW PREVENTION ====== */
+@media (max-width: 768px) {
+    /* Prevent horizontal overflow on all elements */
+    * {
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    
+    /* Ensure body and html don't overflow */
+    html, body {
+        overflow-x: hidden !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    /* Ensure all text content wraps properly */
+    p, span, div, h1, h2, h3, h4, h5, h6, strong, small {
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+        word-break: break-word !important;
+        hyphens: auto !important;
+    }
+    
+    /* Ensure all containers respect viewport width */
+    .container, .main-content, .glass-panel, .page-wrapper {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
     }
 }
 
