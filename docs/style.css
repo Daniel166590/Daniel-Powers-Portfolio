@@ -2253,7 +2253,8 @@ pre {
 #software-projects .glass-section .video-demo,
 #software-projects .glass-section .video-links-row a,
 #mooflixz .video-demo,
-#study-app .video-demo {
+#study-app .video-demo,
+#portfolio-development .glass-section {
     background: linear-gradient(135deg, 
         rgba(142, 68, 173, 0.02) 0%,
         rgba(248, 240, 255, 0.06) 50%,
@@ -2319,6 +2320,7 @@ pre {
 /* Ensure proper hover effects for themed sections */
 #engineering-projects .glass-section:hover,
 #software-projects .glass-section:hover,
+#portfolio-development .glass-section:hover,
 #audio-projects .glass-section:hover,
 #coursework .glass-section:hover,
 #leadership .glass-section:hover,
@@ -2602,4 +2604,124 @@ h1 {
         rgba(230, 126, 34, 0.02) 80%,
         rgba(231, 76, 60, 0.025) 100%);
     border-left: 5px solid #9b59b6;
+}
+
+/* ====== PORTFOLIO DEVELOPMENT SECTION ====== */
+.portfolio-dev-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 1.5rem;
+}
+
+.portfolio-icon {
+    font-size: 3rem;
+    flex-shrink: 0;
+    margin-top: 0.5rem;
+}
+
+.portfolio-description h4 {
+    color: #2c3e50;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+}
+
+.tech-stack {
+    font-size: 0.95rem;
+    color: #34495e;
+    margin-bottom: 1rem;
+    padding: 0.8rem 1rem;
+    background: rgba(52, 152, 219, 0.08);
+    border-radius: 8px;
+    border-left: 3px solid #3498db;
+}
+
+.tech-stack strong {
+    color: #2980b9;
+}
+
+.portfolio-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin: 1.2rem 0;
+}
+
+.feature-tag {
+    background: linear-gradient(135deg, 
+        rgba(46, 204, 113, 0.1) 0%,
+        rgba(39, 174, 96, 0.15) 100%);
+    color: #27ae60;
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 0.4rem 0.8rem;
+    border-radius: 12px;
+    border: 1px solid rgba(39, 174, 96, 0.2);
+}
+
+.portfolio-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.portfolio-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.2rem;
+    background: linear-gradient(135deg, 
+        rgba(52, 152, 219, 0.1) 0%,
+        rgba(41, 128, 185, 0.15) 100%);
+    color: #2980b9;
+    text-decoration: none;
+    border-radius: 8px;
+    border: 1px solid rgba(52, 152, 219, 0.3);
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.portfolio-link:hover {
+    background: linear-gradient(135deg, 
+        rgba(52, 152, 219, 0.2) 0%,
+        rgba(41, 128, 185, 0.25) 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.2);
+}
+
+.portfolio-link.secondary {
+    background: linear-gradient(135deg, 
+        rgba(149, 165, 166, 0.1) 0%,
+        rgba(127, 140, 141, 0.15) 100%);
+    color: #7f8c8d;
+    border-color: rgba(149, 165, 166, 0.3);
+}
+
+.portfolio-link.secondary:hover {
+    background: linear-gradient(135deg, 
+        rgba(149, 165, 166, 0.2) 0%,
+        rgba(127, 140, 141, 0.25) 100%);
+    box-shadow: 0 4px 12px rgba(127, 140, 141, 0.2);
+}
+
+/* Responsive adjustments for portfolio section */
+@media (max-width: 768px) {
+    .portfolio-dev-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .portfolio-links {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .portfolio-link {
+        width: 100%;
+        justify-content: center;
+        max-width: 250px;
+    }
 }
