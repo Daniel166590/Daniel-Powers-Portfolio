@@ -600,7 +600,7 @@ void move(int direction, int speed){
                         Engineering Technology, and Audio Production.
                     </p>
                     <div class="video-links-row single-link">
-                        <a href="AdditionalInformation/Resume2025b.pdf" target="_blank">📄 View Resume/CV (PDF)</a>
+                        <a href="AdditionalInformation/PowersResume.pdf" target="_blank">📄 View Resume/CV (PDF)</a>
                     </div>
                 </div>
 
@@ -732,6 +732,11 @@ void move(int direction, int speed){
                             const video = entry.target;
                             const state = videoStates.get(video);
                             if (state) {
+                                // Skip all intersection logic for videos in popup mode
+                                if (isVideoInPopupMode(video)) {
+                                    return;
+                                }
+                                
                                 // Calculate how much of the video is visible
                                 const visibilityRatio = entry.intersectionRatio;
                                 
@@ -767,10 +772,21 @@ void move(int direction, int speed){
             return globalObserver;
         }
         
+        // Helper function to check if video is in popup/PiP/fullscreen mode
+        function isVideoInPopup(video) {
+            return document.pictureInPictureElement === video || 
+                   video.webkitDisplayingFullscreen || 
+                   document.fullscreenElement === video ||
+                   document.webkitFullscreenElement === video;
+        }
+        
         // Global focus/blur handlers (registered once)
         window.addEventListener('blur', () => {
             hasFocus = false;
             videoStates.forEach((state, video) => {
+                // Ignore videos in popup/PiP/fullscreen mode
+                if (isVideoInPopupMode(video)) return;
+                
                 video.pause();
                 if (state.unmuteTimeout) {
                     clearTimeout(state.unmuteTimeout);
@@ -782,18 +798,40 @@ void move(int direction, int speed){
         window.addEventListener('focus', () => {
             hasFocus = true;
             videoStates.forEach((state, video) => {
+                // Ignore videos in popup/PiP/fullscreen mode
+                if (isVideoInPopupMode(video)) return;
+                
                 if (state.isIntersecting) handleVideoPlayback(video, state);
             });
         });
         
         function pauseOtherVideos(newVideo) {
             if (currentPlayingVideo && currentPlayingVideo !== newVideo && !currentPlayingVideo.paused) {
-                currentPlayingVideo.pause();
+                // Skip pausing if the current video is in popup mode
+                if (!isVideoInPopupMode(currentPlayingVideo)) {
+                    currentPlayingVideo.pause();
+                }
             }
             currentPlayingVideo = newVideo;
         }
         
+        function isVideoInPopupMode(video) {
+            return document.pictureInPictureElement === video || 
+                   video.webkitDisplayingFullscreen || 
+                   document.fullscreenElement === video ||
+                   document.webkitFullscreenElement === video ||
+                   // Additional checks for various fullscreen states
+                   video.webkitPresentationMode === 'picture-in-picture' ||
+                   video.webkitPresentationMode === 'fullscreen';
+        }
+        
         function handleVideoPlayback(video, state) {
+            // Completely skip all special handling if video is in popup mode
+            const isInPopup = isVideoInPopupMode(video);
+            if (isInPopup) {
+                return; // Exit early, let video play naturally without any interference
+            }
+            
             if (state.isIntersecting && hasFocus && state.hasLoaded) {
                 pauseOtherVideos(video);
                 
@@ -854,6 +892,67 @@ void move(int direction, int speed){
             
             videoStates.set(video, state);
             getObserver().observe(video);
+            
+            // Add popup/PiP event listeners
+            if (hasAudio) {
+                // Picture-in-Picture events
+                video.addEventListener('enterpictureinpicture', () => {
+                    // When entering PiP, let video play naturally without any special handling
+                    state.userLatchedMute = false; // Reset mute preference for PiP
+                    video.muted = false; // Unmute when entering PiP
+                    if (state.unmuteTimeout) {
+                        clearTimeout(state.unmuteTimeout);
+                        state.unmuteTimeout = null;
+                    }
+                });
+                
+                video.addEventListener('leavepictureinpicture', () => {
+                    // When leaving PiP, resume normal intersection-based handling
+                    // The next intersection observer callback will handle mute state
+                });
+                
+                // Fullscreen events (WebKit)
+                video.addEventListener('webkitbeginfullscreen', () => {
+                    state.userLatchedMute = false;
+                    video.muted = false;
+                    if (state.unmuteTimeout) {
+                        clearTimeout(state.unmuteTimeout);
+                        state.unmuteTimeout = null;
+                    }
+                });
+                
+                video.addEventListener('webkitendfullscreen', () => {
+                    // Resume normal intersection-based handling when leaving fullscreen
+                });
+                
+                // Standard fullscreen events
+                document.addEventListener('fullscreenchange', () => {
+                    if (document.fullscreenElement === video) {
+                        // Entering fullscreen
+                        state.userLatchedMute = false;
+                        video.muted = false;
+                        if (state.unmuteTimeout) {
+                            clearTimeout(state.unmuteTimeout);
+                            state.unmuteTimeout = null;
+                        }
+                    }
+                    // Leaving fullscreen is handled by normal intersection logic
+                });
+                
+                // WebKit fullscreen events
+                document.addEventListener('webkitfullscreenchange', () => {
+                    if (document.webkitFullscreenElement === video) {
+                        // Entering fullscreen
+                        state.userLatchedMute = false;
+                        video.muted = false;
+                        if (state.unmuteTimeout) {
+                            clearTimeout(state.unmuteTimeout);
+                            state.unmuteTimeout = null;
+                        }
+                    }
+                    // Leaving fullscreen is handled by normal intersection logic
+                });
+            }
             
             // Setup mute button if provided
             if (buttonId && hasAudio) {
@@ -1069,6 +1168,80 @@ void move(int direction, int speed){
                     clearTimeout(fastScrollTimeout);
                 }
             }, { passive: true });
+        }
+    });
+    </script>
+    <script>
+    // Index scrollability detection and scrollbar management
+    document.addEventListener("DOMContentLoaded", function() {
+        const desktopIndex = document.getElementById('desktop-index');
+        
+        if (desktopIndex) {
+            function checkIndexScrollability() {
+                // Check if content height exceeds container height
+                const isScrollable = desktopIndex.scrollHeight > desktopIndex.clientHeight;
+                
+                if (isScrollable) {
+                    desktopIndex.classList.add('is-scrollable');
+                } else {
+                    desktopIndex.classList.remove('is-scrollable');
+                }
+            }
+            
+            // Auto-scroll index to show clicked element and remaining content
+            function autoScrollIndexForElement(clickedElement) {
+                if (!desktopIndex.classList.contains('is-scrollable')) return;
+                
+                const indexRect = desktopIndex.getBoundingClientRect();
+                const elementRect = clickedElement.getBoundingClientRect();
+                
+                // Calculate element position relative to index container
+                const elementTop = elementRect.top - indexRect.top + desktopIndex.scrollTop;
+                
+                // Calculate optimal scroll position
+                // Position the clicked element about 1/4 from the top of the visible area
+                const targetScrollTop = elementTop - (indexRect.height * 0.25);
+                
+                // Ensure we don't scroll past the beginning or end
+                const maxScrollTop = desktopIndex.scrollHeight - desktopIndex.clientHeight;
+                const finalScrollTop = Math.max(0, Math.min(targetScrollTop, maxScrollTop));
+                
+                // Smooth scroll the index
+                desktopIndex.scrollTo({
+                    top: finalScrollTop,
+                    behavior: 'smooth'
+                });
+            }
+            
+            // Add click handlers to all index links
+            function setupIndexScrollHandlers() {
+                const indexLinks = desktopIndex.querySelectorAll('a[href^="#"]');
+                
+                indexLinks.forEach(link => {
+                    link.addEventListener('click', function(e) {
+                        // Small delay to ensure the click is processed first
+                        setTimeout(() => {
+                            autoScrollIndexForElement(this);
+                        }, 50);
+                    });
+                });
+            }
+            
+            // Check on load
+            checkIndexScrollability();
+            setupIndexScrollHandlers();
+            
+            // Check on window resize
+            window.addEventListener('resize', checkIndexScrollability);
+            
+            // Re-check after fonts load or dynamic content changes
+            if (document.fonts) {
+                document.fonts.ready.then(checkIndexScrollability);
+            }
+            
+            // Optional: Re-check periodically for any dynamic content changes
+            const observer = new ResizeObserver(checkIndexScrollability);
+            observer.observe(desktopIndex);
         }
     });
     </script>

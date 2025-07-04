@@ -786,8 +786,8 @@ pre {
         transform 0.3s ease;
     max-height: 80vh;
     overflow-y: auto;
-    scrollbar-width: thin;
-    scrollbar-color: #bbb #f5f5f5;
+    scrollbar-width: thin; /* Keep thin scrollbar for functionality */
+    scrollbar-color: transparent transparent; /* Make it transparent by default */
 }
 
 /* Subtle animated gradient overlay */
@@ -818,16 +818,36 @@ pre {
         inset 0 1px 0 rgba(255, 255, 255, 0.5);
     transform: translateY(-1px);
 }
-/* Custom scrollbar for WebKit browsers */
+
+/* Show scrollbar on hover only when content is scrollable (Firefox) */
+#desktop-index.is-scrollable:hover {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(52, 152, 219, 0.8) rgba(255, 255, 255, 0.1);
+}
+
+/* Custom scrollbar for WebKit browsers - functionally present but visually hidden */
 #desktop-index::-webkit-scrollbar {
-    width: 6px;
+    width: 6px; /* Keep functional width */
+    background: transparent; /* Make track transparent */
 }
+
+/* Show scrollbar on hover only when content is scrollable */
+#desktop-index.is-scrollable:hover::-webkit-scrollbar {
+    background: rgba(255, 255, 255, 0.1); /* Show track background on hover */
+}
+
 #desktop-index::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, #3498db, #9b59b6);
+    background: transparent; /* Hidden by default */
     border-radius: 8px;
+    transition: background 0.3s ease;
 }
+
+#desktop-index.is-scrollable:hover::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #3498db, #9b59b6); /* Show colorful thumb on hover */
+}
+
 #desktop-index::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.1);
+    background: transparent; /* Always transparent track */
     border-radius: 8px;
 }
 
@@ -2052,7 +2072,6 @@ pre {
     font-weight: 400;
     letter-spacing: 0.3px;
     transition: all 0.4s ease;
-    overflow: hidden;
 }
 
 .main-content h1 + p::before,
@@ -2638,39 +2657,80 @@ pre {
     }
 }
 
-/* ===== TEXT CLARITY OPTIMIZATION DURING SCROLL ===== */
+/* ====== MACOS-SPECIFIC OPTIMIZATIONS ====== */
+/* Target macOS Safari and WebKit-based browsers */
+@supports (-webkit-backdrop-filter: blur(1px)) {
+    @media (min-width: 769px) {
+        /* macOS Safari backdrop-filter optimizations */
+        .glass-panel,
+        #desktop-index {
+            /* Force hardware acceleration on macOS */
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            -webkit-perspective: 1000px;
+            perspective: 1000px;
+        }
+        
+        /* Disable problematic backdrop-filter combinations on macOS during scroll */
+        .scrolling .glass-panel {
+            /* Use simpler backdrop-filter that performs better on Apple Silicon */
+            backdrop-filter: blur(8px) !important;
+            -webkit-backdrop-filter: blur(8px) !important;
+            /* Remove saturation which causes performance issues on M1 */
+            filter: none !important;
+        }
+        
+        .scrolling #desktop-index {
+            backdrop-filter: blur(8px) !important;
+            -webkit-backdrop-filter: blur(8px) !important;
+            filter: none !important;
+        }
+        
+        /* For fast scrolling on macOS, use even more conservative approach */
+        .fast-scrolling .glass-panel,
+        .fast-scrolling #desktop-index {
+            /* M1 performs much better with simple blur, no saturation */
+            backdrop-filter: blur(3px) !important;
+            -webkit-backdrop-filter: blur(3px) !important;
+        }
+        
+        .fast-scrolling .leadership-item,
+        .fast-scrolling .badge,
+        .fast-scrolling .coursework-card,
+        .fast-scrolling .highlight-item,
+        .fast-scrolling .video-demo,
+        .fast-scrolling .main-content li,
+        .fast-scrolling .mute-btn,
+        .fast-scrolling .video-links-row a {
+            /* Disable backdrop-filter entirely for small elements on M1 */
+            backdrop-filter: none !important;
+            -webkit-backdrop-filter: none !important;
+            background: rgba(255, 255, 255, 0.12) !important;
+        }
+    }
+}
+
+/* macOS-specific scroll performance fixes */
+@media (min-width: 769px) and (-webkit-min-device-pixel-ratio: 2) {
+    /* Target Retina displays (likely macOS) */
     .scrolling {
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        text-rendering: optimizeSpeed; /* Faster, consistent text rendering */
-        font-smooth: never; /* Prevent font smoothing changes */
+        /* Disable subpixel font rendering that causes issues on Retina */
+        -webkit-font-smoothing: subpixel-antialiased;
+        -moz-osx-font-smoothing: auto;
+        /* Force consistent pixel boundaries */
+        transform: translateZ(0);
     }
     
-    /* Force consistent text rendering on all text elements during scroll */
-    .scrolling h1,
-    .scrolling h2,
-    .scrolling h3,
-    .scrolling h4,
-    .scrolling h5,
-    .scrolling h6,
-    .scrolling p,
-    .scrolling span,
-    .scrolling li,
-    .scrolling a,
-    .scrolling strong,
-    .scrolling small {
-        -webkit-font-smoothing: antialiased !important;
-        -moz-osx-font-smoothing: grayscale !important;
-        text-rendering: optimizeSpeed !important;
-        transform: translateZ(0) !important; /* Force GPU layer for text */
-        backface-visibility: hidden !important;
-    }
-    
-    /* Prevent subpixel shifts that cause perceived jitter */
+    /* Reduce layer complexity on high-DPI displays */
     .scrolling * {
-        transform: translate3d(0, 0, 0) !important;
+        /* Prevent excessive layer creation on Retina displays */
         will-change: auto !important;
+        -webkit-transform: none !important;
+        transform: none !important;
     }
+}
 
 
 
