@@ -737,9 +737,16 @@ void move(int direction, int speed){
                                 
                                 // Load video when 50% visible, play when 100% visible
                                 if (visibilityRatio >= 0.5 && !state.hasLoaded) {
-                                    // Preload the video metadata and some content
-                                    video.preload = 'metadata';
-                                    video.load();
+                                    // Progressive loading: metadata first, then auto
+                                    if (video.preload === 'none') {
+                                        video.preload = 'metadata';
+                                        // Allow browser to naturally load metadata without forcing reload
+                                        setTimeout(() => {
+                                            if (state.hasLoaded && video.preload === 'metadata') {
+                                                video.preload = 'auto';
+                                            }
+                                        }, 500);
+                                    }
                                     state.hasLoaded = true;
                                 }
                                 
@@ -929,6 +936,140 @@ void move(int direction, int speed){
     } else {
         lazyRegisterVideos();
     }
+    });
+    </script>
+    <script>
+    // Smooth velocity-based desktop scroll performance optimization
+    document.addEventListener("DOMContentLoaded", function() {
+        // Only apply scroll optimizations on desktop
+        if (window.innerWidth > 768) {
+            let scrollTimeout;
+            let fastScrollTimeout;
+            let isScrolling = false;
+            let isFastScrolling = false;
+            let lastScrollTime = 0;
+            let lastScrollY = 0;
+            
+            const THROTTLE_MS = 8; // Higher frequency for smoother detection
+            const DEBOUNCE_MS = 200;
+            const FAST_SCROLL_THRESHOLD = 4; // Slightly higher threshold
+            const FAST_SCROLL_EXIT_THRESHOLD = 1.5; // Lower exit threshold
+            const FAST_SCROLL_DELAY = 50; // Delay before entering fast mode
+            const VELOCITY_SAMPLES = 5; // More samples for smoother average
+            
+            // Cache DOM references
+            const body = document.body;
+            let velocityHistory = [];
+            let smoothVelocity = 0;
+            
+            function enableLightScrollMode() {
+                if (!isScrolling) {
+                    body.classList.add('scrolling');
+                    isScrolling = true;
+                }
+            }
+            
+            function enableFastScrollMode() {
+                if (!isFastScrolling) {
+                    body.classList.add('fast-scrolling');
+                    isFastScrolling = true;
+                }
+            }
+            
+            function disableFastScrollMode() {
+                if (isFastScrolling) {
+                    body.classList.remove('fast-scrolling');
+                    isFastScrolling = false;
+                }
+            }
+            
+            function disableScrollMode() {
+                if (isScrolling) {
+                    body.classList.remove('scrolling');
+                    isScrolling = false;
+                }
+                if (isFastScrolling) {
+                    body.classList.remove('fast-scrolling');
+                    isFastScrolling = false;
+                }
+                velocityHistory = [];
+                smoothVelocity = 0;
+            }
+            
+            function updateVelocity(currentY, currentTime) {
+                const deltaY = Math.abs(currentY - lastScrollY);
+                const deltaTime = currentTime - lastScrollTime;
+                
+                if (deltaTime > 0 && deltaTime < 100) { // Ignore very large time gaps
+                    const instantVelocity = deltaY / deltaTime;
+                    velocityHistory.push(instantVelocity);
+                    
+                    // Keep only recent samples
+                    if (velocityHistory.length > VELOCITY_SAMPLES) {
+                        velocityHistory.shift();
+                    }
+                    
+                    // Calculate smoothed velocity with exponential moving average
+                    const avgVelocity = velocityHistory.reduce((sum, v) => sum + v, 0) / velocityHistory.length;
+                    smoothVelocity = smoothVelocity * 0.7 + avgVelocity * 0.3; // Smooth the velocity
+                }
+            }
+            
+            // Smooth scroll handler with debounced fast mode
+            function handleScroll() {
+                const now = Date.now();
+                const currentY = window.pageYOffset;
+                
+                // Throttle for smooth detection
+                if (now - lastScrollTime < THROTTLE_MS) {
+                    return;
+                }
+                
+                // Update velocity
+                updateVelocity(currentY, now);
+                
+                // Always enable light scroll mode immediately
+                enableLightScrollMode();
+                
+                // Clear existing timeouts
+                clearTimeout(scrollTimeout);
+                clearTimeout(fastScrollTimeout);
+                
+                // Fast scroll mode with delay and hysteresis
+                if (smoothVelocity > FAST_SCROLL_THRESHOLD && !isFastScrolling) {
+                    // Delay entering fast mode to prevent jitter
+                    fastScrollTimeout = setTimeout(() => {
+                        if (smoothVelocity > FAST_SCROLL_THRESHOLD) {
+                            enableFastScrollMode();
+                        }
+                    }, FAST_SCROLL_DELAY);
+                } else if (smoothVelocity < FAST_SCROLL_EXIT_THRESHOLD && isFastScrolling) {
+                    // Exit fast mode immediately when velocity drops
+                    disableFastScrollMode();
+                }
+                
+                lastScrollTime = now;
+                lastScrollY = currentY;
+                
+                // Reset scroll mode after scrolling stops
+                scrollTimeout = setTimeout(disableScrollMode, DEBOUNCE_MS);
+            }
+            
+            // Passive scroll listener
+            window.addEventListener('scroll', handleScroll, { 
+                passive: true
+            });
+            
+            // Cleanup on resize
+            window.addEventListener('resize', () => {
+                if (window.innerWidth <= 768) {
+                    window.removeEventListener('scroll', handleScroll);
+                    body.classList.remove('scrolling', 'fast-scrolling');
+                    clearTimeout(scrollTimeout);
+                    clearTimeout(fastScrollTimeout);
+                }
+            }, { passive: true });
+        }
     });
     </script>
 </body>

@@ -2525,34 +2525,152 @@ pre {
     }
 }
 
-/* ====== MOBILE OVERFLOW PREVENTION ====== */
-@media (max-width: 768px) {
-    /* Prevent horizontal overflow on all elements */
-    * {
-        max-width: 100% !important;
-        box-sizing: border-box !important;
+/* ====== DESKTOP SCROLL PERFORMANCE OPTIMIZATIONS ====== */
+@media (min-width: 769px) {
+    /* Minimal containment to reduce layer overhead */
+    .glass-panel {
+        contain: style paint;
     }
     
-    /* Ensure body and html don't overflow */
-    html, body {
-        overflow-x: hidden !important;
-        width: 100% !important;
-        max-width: 100% !important;
+    #desktop-index {
+        contain: style paint;
     }
     
-    /* Ensure all text content wraps properly */
-    p, span, div, h1, h2, h3, h4, h5, h6, strong, small {
-        word-wrap: break-word !important;
-        overflow-wrap: break-word !important;
-        word-break: break-word !important;
-        hyphens: auto !important;
+    /* ===== LIGHT SCROLLING: Subtle optimizations, preserve text clarity ===== */
+    .scrolling .glass-panel {
+        backdrop-filter: blur(12px) saturate(140%) !important; /* Reduced to maintain text clarity */
+        -webkit-backdrop-filter: blur(12px) saturate(140%) !important;
+        box-shadow: 0 4px 24px 0 rgba(31, 38, 135, 0.06) !important;
     }
     
-    /* Ensure all containers respect viewport width */
-    .container, .main-content, .glass-panel, .page-wrapper {
-        width: 100% !important;
-        max-width: 100% !important;
-        overflow-x: hidden !important;
+    .scrolling #desktop-index {
+        backdrop-filter: blur(12px) saturate(140%) !important;
+        -webkit-backdrop-filter: blur(12px) saturate(140%) !important;
+    }
+    
+    .scrolling .leadership-item,
+    .scrolling .badge,
+    .scrolling .coursework-card,
+    .scrolling .highlight-item,
+    .scrolling .video-demo,
+    .scrolling .main-content li,
+    .scrolling .mute-btn,
+    .scrolling .video-links-row a {
+        backdrop-filter: blur(6px) saturate(120%) !important; /* Minimal blur to preserve text */
+        -webkit-backdrop-filter: blur(6px) saturate(120%) !important;
+        box-shadow: 0 2px 12px 0 rgba(31, 38, 135, 0.04) !important;
+    }
+    
+    /* ===== FAST SCROLLING: Optimized for both performance and text clarity ===== */
+    .fast-scrolling .glass-panel {
+        backdrop-filter: blur(4px) saturate(110%) !important; /* Minimal blur for clarity */
+        -webkit-backdrop-filter: blur(4px) saturate(110%) !important;
+        box-shadow: 0 2px 12px 0 rgba(31, 38, 135, 0.03) !important;
+    }
+    
+    .fast-scrolling #desktop-index {
+        backdrop-filter: blur(4px) saturate(110%) !important;
+        -webkit-backdrop-filter: blur(4px) saturate(110%) !important;
+    }
+    
+    .fast-scrolling .leadership-item,
+    .fast-scrolling .badge,
+    .fast-scrolling .coursework-card,
+    .fast-scrolling .highlight-item,
+    .fast-scrolling .video-demo,
+    .fast-scrolling .main-content li,
+    .fast-scrolling .mute-btn,
+    .fast-scrolling .video-links-row a {
+        backdrop-filter: blur(2px) saturate(105%) !important; /* Minimal blur, maximum clarity */
+        -webkit-backdrop-filter: blur(2px) saturate(105%) !important;
+        box-shadow: 0 1px 6px 0 rgba(31, 38, 135, 0.02) !important;
+        background: rgba(255, 255, 255, 0.08) !important;
+    }
+    
+    /* Disable interactions during any scrolling */
+    .scrolling * {
+        pointer-events: none !important;
+    }
+    
+    .scrolling a,
+    .scrolling button,
+    .scrolling video {
+        pointer-events: auto !important;
+    }
+    
+    /* Smooth state transitions - prevent abrupt changes */
+    .glass-panel,
+    #desktop-index,
+    .leadership-item,
+    .badge,
+    .coursework-card,
+    .highlight-item,
+    .video-demo,
+    .main-content li,
+    .mute-btn,
+    .video-links-row a {
+        transition: backdrop-filter 0.15s ease-out,
+                   background 0.15s ease-out,
+                   box-shadow 0.15s ease-out !important;
+    }
+    
+    /* Override transitions during active scrolling to prevent lag */
+    .scrolling .glass-panel,
+    .scrolling #desktop-index,
+    .scrolling .leadership-item,
+    .scrolling .badge,
+    .scrolling .coursework-card,
+    .scrolling .highlight-item,
+    .scrolling .video-demo,
+    .scrolling .main-content li,
+    .scrolling .mute-btn,
+    .scrolling .video-links-row a {
+        transition: none !important;
+    }
+    
+    /* Smooth re-enable when scrolling completely stops */
+    .glass-panel {
+        transition-delay: 0.05s;
+    }
+    
+    #desktop-index {
+        transition-delay: 0.1s;
     }
 }
+
+/* ===== TEXT CLARITY OPTIMIZATION DURING SCROLL ===== */
+    .scrolling {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeSpeed; /* Faster, consistent text rendering */
+        font-smooth: never; /* Prevent font smoothing changes */
+    }
+    
+    /* Force consistent text rendering on all text elements during scroll */
+    .scrolling h1,
+    .scrolling h2,
+    .scrolling h3,
+    .scrolling h4,
+    .scrolling h5,
+    .scrolling h6,
+    .scrolling p,
+    .scrolling span,
+    .scrolling li,
+    .scrolling a,
+    .scrolling strong,
+    .scrolling small {
+        -webkit-font-smoothing: antialiased !important;
+        -moz-osx-font-smoothing: grayscale !important;
+        text-rendering: optimizeSpeed !important;
+        transform: translateZ(0) !important; /* Force GPU layer for text */
+        backface-visibility: hidden !important;
+    }
+    
+    /* Prevent subpixel shifts that cause perceived jitter */
+    .scrolling * {
+        transform: translate3d(0, 0, 0) !important;
+        will-change: auto !important;
+    }
+
+
 
