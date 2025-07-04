@@ -215,9 +215,38 @@ pre {
     max-width: 100%;
 }
 .image-flex figcaption {
-    margin-top: 0.5rem;
-    font-size: 0.9rem;
-    color: #555;
+    margin-top: 1rem;
+    padding: 0.8rem 1.2rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #2c3e50;
+    background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.3) 0%,
+        rgba(240, 248, 255, 0.4) 50%,
+        rgba(255, 255, 255, 0.3) 100%);
+    backdrop-filter: blur(10px) saturate(140%);
+    -webkit-backdrop-filter: blur(10px) saturate(140%);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 
+        0 3px 16px rgba(0, 90, 156, 0.06),
+        inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    transition: all 0.3s ease;
+    letter-spacing: 0.2px;
+    line-height: 1.4;
+}
+
+.image-flex figcaption:hover {
+    background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.4) 0%,
+        rgba(240, 248, 255, 0.5) 50%,
+        rgba(255, 255, 255, 0.4) 100%);
+    box-shadow: 
+        0 5px 24px rgba(0, 90, 156, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+    color: #003d6b;
 }
 
 /* Fullscreen image overlay */
@@ -366,9 +395,48 @@ pre {
 }
 
 /* Description text below video in normal flow */
-#mooflixz-container #mooflixz-description {
-    margin-top: 1rem;
+#mooflixz-container #mooflixz-description,
+#darrel-container #darrel-description,
+#caminandes-container #caminandes-description {
+    margin-top: 0.8rem;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #2c3e50;
+    background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.25) 0%,
+        rgba(240, 248, 255, 0.35) 50%,
+        rgba(255, 255, 255, 0.25) 100%);
+    backdrop-filter: blur(12px) saturate(150%);
+    -webkit-backdrop-filter: blur(12px) saturate(150%);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 16px;
     text-align: center;
+    box-shadow: 
+        0 4px 20px rgba(0, 90, 156, 0.06),
+        inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    transition: all 0.3s ease;
+    letter-spacing: 0.3px;
+    line-height: 1.5;
+    position: relative;
+    overflow: hidden;
+}
+
+#mooflixz-container #mooflixz-description::before,
+#darrel-container #darrel-description::before,
+#caminandes-container #caminandes-description::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(0, 90, 156, 0.4), 
+        rgba(46, 204, 113, 0.6), 
+        rgba(0, 90, 156, 0.4), 
+        transparent);
 }
 
 /* Audio Production video containers - same styling as Mooflixz */
@@ -439,6 +507,22 @@ pre {
         max-width: 100%;
         min-width: 250px;
     }
+    
+    /* Enhanced mobile styling for mute buttons */
+    .mute-btn {
+        margin-top: 1rem;
+        padding: 0.6rem 1.4rem;
+        font-size: 0.9rem;
+        border-radius: 16px;
+    }
+    
+    /* Enhanced mobile styling for captions */
+    .image-flex figcaption {
+        margin-top: 0.8rem;
+        padding: 0.6rem 1rem;
+        font-size: 0.8rem;
+        border-radius: 10px;
+    }
 }
 
 /* Hide mute buttons on tablet and phone screens to avoid interference with video controls */
@@ -463,20 +547,117 @@ pre {
 }
 
 .mute-btn {
-    margin-top: 1rem;
-    font-size: 1.1rem;
-    color: #222;
-    background: rgba(255,255,255,0.32);
-    border-radius: 12px;
-    padding: 0.5em 1.5em;
-    border: 1.5px solid rgba(31,38,135,0.13);
-    box-shadow: 0 2px 12px 0 rgba(31,38,135,0.08);
+    position: relative;
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #003d6b;
+    background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.4) 0%,
+        rgba(240, 248, 255, 0.5) 50%,
+        rgba(255, 255, 255, 0.4) 100%);
+    backdrop-filter: blur(15px) saturate(150%);
+    -webkit-backdrop-filter: blur(15px) saturate(150%);
+    border: 1.5px solid rgba(255, 255, 255, 0.35);
+    border-radius: 18px;
+    padding: 0.8rem 1.8rem;
+    box-shadow: 
+        0 6px 28px rgba(0, 90, 156, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.5);
     cursor: pointer;
-    transition: background 0.2s, box-shadow 0.2s;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    letter-spacing: 0.2px;
+    overflow: hidden;
+    border-left: 3px solid #e74c3c;
 }
+
+.mute-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(231, 76, 60, 0.6), 
+        rgba(46, 204, 113, 0.7), 
+        transparent);
+    transition: left 0.4s ease;
+}
+
 .mute-btn:hover {
-    background: rgba(255,255,255,0.5);
-    box-shadow: 0 4px 24px 0 rgba(31,38,135,0.18);
+    background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.55) 0%,
+        rgba(240, 248, 255, 0.65) 50%,
+        rgba(255, 255, 255, 0.55) 100%);
+    border-color: rgba(0, 90, 156, 0.4);
+    border-left-color: #27ae60;
+    box-shadow: 
+        0 10px 40px rgba(0, 90, 156, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.7);
+    transform: translateY(-3px);
+    color: #005a9c;
+}
+
+.mute-btn:hover::before {
+    left: 0;
+}
+
+.mute-btn:active {
+    transform: translateY(-1px);
+    transition: transform 0.1s ease;
+}
+
+/* Special styling when video is muted vs unmuted */
+.mute-btn[data-muted="true"] {
+    border-left-color: #e74c3c;
+    background: linear-gradient(135deg, 
+        rgba(231, 76, 60, 0.1) 0%,
+        rgba(255, 255, 255, 0.4) 50%,
+        rgba(240, 248, 255, 0.5) 100%);
+}
+
+.mute-btn[data-muted="false"] {
+    border-left-color: #27ae60;
+    background: linear-gradient(135deg, 
+        rgba(46, 204, 113, 0.1) 0%,
+        rgba(255, 255, 255, 0.4) 50%,
+        rgba(240, 248, 255, 0.5) 100%);
+}
+
+.mute-btn[data-muted="true"]:hover {
+    border-left-color: #c0392b;
+    background: linear-gradient(135deg, 
+        rgba(231, 76, 60, 0.15) 0%,
+        rgba(255, 255, 255, 0.55) 50%,
+        rgba(240, 248, 255, 0.65) 100%);
+}
+
+.mute-btn[data-muted="false"]:hover {
+    border-left-color: #2ecc71;
+    background: linear-gradient(135deg, 
+        rgba(46, 204, 113, 0.15) 0%,
+        rgba(255, 255, 255, 0.55) 50%,
+        rgba(240, 248, 255, 0.65) 100%);
+}
+
+/* Subtle pulsing effect for muted state */
+.mute-btn[data-muted="true"] {
+    animation: mute-pulse 2s ease-in-out infinite;
+}
+
+@keyframes mute-pulse {
+    0%, 100% { 
+        box-shadow: 
+            0 6px 28px rgba(0, 90, 156, 0.08),
+            inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    }
+    50% { 
+        box-shadow: 
+            0 8px 32px rgba(231, 76, 60, 0.12),
+            inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    }
 }
 
 /* ====== LAYOUT: GRID FOR 1/3 + 2/3 SPLIT ====== */

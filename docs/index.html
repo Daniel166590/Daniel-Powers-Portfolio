@@ -229,7 +229,7 @@ void move(int direction, int speed){
                         Your browser does not support the video tag.
                     </video>
                     <p id="mooflixz-description" style="opacity:0;transition:opacity 0.3s ease;">Sound to Showcase Playback Enabled by the Youtube API</p>
-                    <button id="mute-toggle" class="mute-btn" type="button">🔇 Unmute Video</button>
+                    <button id="mute-toggle" class="mute-btn" type="button" data-muted="true">🔇 Unmute Video</button>
                 </div>
                 <ul>
                     <li><strong>Developed</strong> a full-stack music web application using <strong>React</strong>, <strong>Node.js</strong>, and <strong>MySQL</strong>.</li>
@@ -284,7 +284,7 @@ void move(int direction, int speed){
                         Your browser does not support the video tag.
                     </video>
                     <p id="darrel-description" style="opacity:0;transition:opacity 0.3s ease;">Audio Mixing & Sound Design Showcase</p>
-                    <button id="darrel-mute-toggle" class="mute-btn" type="button">🔇 Unmute Video</button>
+                    <button id="darrel-mute-toggle" class="mute-btn" type="button" data-muted="true">🔇 Unmute Video</button>
                 </div>
                 <ul>
                     <li><strong>Voted Best Audio Design</strong> by leading professor and showcased as a <strong>standout project</strong>.</li>
@@ -307,7 +307,7 @@ void move(int direction, int speed){
                         Your browser does not support the video tag.
                     </video>
                     <p id="caminandes-description" style="opacity:0;transition:opacity 0.3s ease;">Foley Recording & Sound Design Showcase</p>
-                    <button id="caminandes-mute-toggle" class="mute-btn" type="button">🔇 Unmute Video</button>
+                    <button id="caminandes-mute-toggle" class="mute-btn" type="button" data-muted="true">🔇 Unmute Video</button>
                 </div>
                 <ul>
                     <li><strong>Recorded custom Foley sounds</strong> including footsteps, environmental effects, and character movement.</li>
@@ -376,14 +376,14 @@ void move(int direction, int speed){
                                     <span class="course-tag">MATH 1910: Calculus I</span>
                                     <span class="course-tag">MATH 1920: Calculus II</span>
                                     <span class="course-tag">MATH 2050: Probability and Statistics</span>
-                                    <span class="course-tag">MATH 3110: Calculus III</span>
+                                    <span class="course-tag">MATH 3110: Calculus III (In progress)</span>
                                 </div>
                             </div>
                             <div class="course-category">
                                 <h5>🔬 Physical Sciences</h5>
                                 <div class="course-list">
                                     <span class="course-tag">PHYS 2111/2121: Calculus-Based Physics I & II</span>
-                                    <span class="course-tag">CHEM 1110: General Chemistry I</span>
+                                    <span class="course-tag">CHEM 1110: General Chemistry I (In progress)</span>
                                 </div>
                             </div>
                         </div>
@@ -742,6 +742,7 @@ void move(int direction, int speed){
                 if (btn) {
                     function updateButton() {
                         btn.textContent = video.muted ? "🔇 Unmute Video" : "🔊 Mute Video";
+                        btn.setAttribute('data-muted', video.muted.toString());
                     }
                     
                     if (description) {
