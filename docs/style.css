@@ -2112,495 +2112,123 @@ pre {
 
 /* ====== CONTACT SECTION STYLING ====== */
 .contact-section {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin: 2rem 0;
-}
-
-.contact-category {
     padding: 1.5rem;
-    border-radius: 18px;
-    border: 1.5px solid rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(12px) saturate(150%);
-    -webkit-backdrop-filter: blur(12px) saturate(150%);
-    box-shadow: 0 5px 24px rgba(0, 90, 156, 0.08);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px) saturate(140%);
+    -webkit-backdrop-filter: blur(10px) saturate(140%);
+    transition: all 0.3s ease;
 }
 
-.contact-category:hover {
+.contact-section:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 32px rgba(0, 90, 156, 0.12);
 }
 
-.contact-category.professional {
+.contact-section.professional {
     background: linear-gradient(135deg, 
-        rgba(0, 90, 156, 0.08) 0%,
-        rgba(240, 248, 255, 0.35) 50%,
-        rgba(0, 90, 156, 0.08) 100%);
-    border-left: 4px solid #005a9c;
+        rgba(52, 152, 219, 0.08) 0%,
+        rgba(235, 245, 255, 0.15) 50%,
+        rgba(52, 152, 219, 0.08) 100%);
+    border-left: 4px solid #3498db;
 }
 
-.contact-category.personal {
+.contact-section.personal {
     background: linear-gradient(135deg, 
         rgba(46, 204, 113, 0.08) 0%,
-        rgba(240, 255, 248, 0.35) 50%,
+        rgba(240, 255, 248, 0.15) 50%,
         rgba(46, 204, 113, 0.08) 100%);
-    border-left: 4px solid #27ae60;
+    border-left: 4px solid #2ecc71;
 }
 
-.contact-category h4 {
-    margin: 0 0 1rem 0;
-    font-size: 1.1rem;
-    font-weight: 600;
-    letter-spacing: 0.3px;
-}
-
-.contact-category.professional h4 {
-    color: #005a9c;
-}
-
-.contact-category.personal h4 {
-    color: #27ae60;
-}
-
-.contact-category ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-align: center;
-}
-
-.contact-category li {
-    background: none !important;
-    padding: 0.75rem 0;
-    border: none !important;
-    margin: 0;
+.contact-header {
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 0.8rem;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.contact-category li::before {
-    display: none !important;
+.contact-icon {
+    font-size: 1.8rem;
+    flex-shrink: 0;
 }
 
-.contact-category a {
-    color: #0066cc;
+.contact-header h4 {
+    margin: 0;
+    color: #2c3e50;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.contact-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    transition: all 0.2s ease;
+}
+
+.contact-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(4px);
+}
+
+.contact-emoji {
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.contact-info a {
+    color: #2980b9;
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s ease;
+    transition: color 0.2s ease;
 }
 
-.contact-category a:hover {
-    color: #004d99;
+.contact-info a:hover {
+    color: #3498db;
     text-decoration: underline;
 }
 
-.contact-label {
-    background: rgba(0, 90, 156, 0.15);
-    color: #005a9c;
-    padding: 0.2rem 0.6rem;
-    border-radius: 8px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+.contact-info span {
+    color: #2c3e50;
+    font-weight: 500;
 }
 
-.contact-note {
-    color: #666;
+.contact-info small {
+    color: #7f8c8d;
     font-size: 0.85rem;
-    font-style: italic;
 }
 
-/* Mobile responsiveness for contact section */
+/* Responsive adjustments for contact section */
 @media (max-width: 768px) {
-    .contact-section {
+    .contact-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
     
-    .contact-category {
+    .contact-section {
         padding: 1.2rem;
     }
     
-    .contact-category li {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.3rem;
+    .contact-item {
+        padding: 0.6rem;
     }
-}
-
-/* Section-specific themed backgrounds */
-/* Engineering Projects - Blue Tech Theme */
-#engineering-projects .glass-section,
-#engineering-projects .glass-section .video-demo,
-#engineering-projects .glass-section .video-links-row a,
-.subsection-header.driver-cart,
-.subsection-header.robot-towing {
-    background: linear-gradient(135deg, 
-        rgba(0, 90, 156, 0.02) 0%,
-        rgba(240, 248, 255, 0.06) 50%,
-        rgba(0, 90, 156, 0.02) 100%);
-    border-left: 4px solid #005a9c;
-}
-
-/* Software Projects - Purple Tech Theme */
-#software-projects .glass-section,
-#software-projects .glass-section .video-demo,
-#software-projects .glass-section .video-links-row a,
-#mooflixz .video-demo,
-#study-app .video-demo {
-    background: linear-gradient(135deg, 
-        rgba(142, 68, 173, 0.02) 0%,
-        rgba(248, 240, 255, 0.06) 50%,
-        rgba(142, 68, 173, 0.02) 100%);
-    border-left: 4px solid #8e44ad;
-}
-
-/* Audio Projects - Orange Creative Theme */
-#audio-projects .glass-section,
-#audio-projects .glass-section .video-demo,
-#audio-projects .glass-section .video-links-row a,
-#darrel .video-demo,
-#caminandes .video-demo {
-    background: linear-gradient(135deg, 
-        rgba(230, 126, 34, 0.02) 0%,
-        rgba(255, 248, 240, 0.06) 50%,
-        rgba(230, 126, 34, 0.02) 100%);
-    border-left: 4px solid #e67e22;
-}
-
-/* Coursework - Green Academic Theme */
-#coursework .glass-section,
-.coursework-grid .coursework-card {
-    background: linear-gradient(135deg, 
-        rgba(46, 204, 113, 0.02) 0%,
-        rgba(240, 255, 248, 0.06) 50%,
-        rgba(46, 204, 113, 0.02) 100%);
-    border-left: 4px solid #27ae60;
-}
-
-/* Leadership - Red Leadership Theme */
-#leadership .glass-section,
-.leadership-grid .leadership-item,
-.achievements-section {
-    background: linear-gradient(135deg, 
-        rgba(231, 76, 60, 0.02) 0%,
-        rgba(255, 240, 240, 0.06) 50%,
-        rgba(231, 76, 60, 0.02) 100%);
-    border-left: 4px solid #e74c3c;
-}
-
-/* Resume - Dark Professional Theme */
-#resume .glass-section,
-#resume .video-links-row a {
-    background: linear-gradient(135deg, 
-        rgba(52, 73, 94, 0.02) 0%,
-        rgba(248, 249, 250, 0.15) 50%,
-        rgba(52, 73, 94, 0.02) 100%);
-    border-left: 4px solid #34495e;
-}
-
-/* Introduction/Hero section - Warm Welcome Theme */
-.main-content > p:first-of-type,
-.main-content > p:nth-of-type(2),
-.main-content > p:nth-of-type(3) {
-    background: linear-gradient(135deg, 
-        rgba(155, 89, 182, 0.02) 0%,
-        rgba(252, 248, 255, 0.15) 50%,
-        rgba(155, 89, 182, 0.02) 100%);
-    border-left: 4px solid #9b59b6;
-}
-
-/* Ensure proper hover effects for themed sections */
-#engineering-projects .glass-section:hover,
-#software-projects .glass-section:hover,
-#audio-projects .glass-section:hover,
-#coursework .glass-section:hover,
-#leadership .glass-section:hover,
-#resume .glass-section:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 32px rgba(0, 90, 156, 0.12);
-}
-
-/* Theme-specific project enhancements */
-/* Engineering projects - Blue theme for lists and buttons */
-#engineering-projects li,
-#led li,
-#line-following li,
-#plc li {
-    background: linear-gradient(135deg, 
-        rgba(0, 90, 156, 0.06) 0%,
-        rgba(240, 248, 255, 0.25) 50%,
-        rgba(0, 90, 156, 0.06) 100%);
-    border-left: 3px solid #005a9c;
-}
-
-#engineering-projects .video-links-row a,
-#led .video-links-row a,
-#line-following .video-links-row a,
-#plc .video-links-row a {
-    background: linear-gradient(135deg, 
-        rgba(0, 90, 156, 0.1) 0%,
-        rgba(240, 248, 255, 0.4) 50%,
-        rgba(0, 90, 156, 0.1) 100%);
-    border: 2px solid #005a9c;
-    color: #005a9c;
-}
-
-#engineering-projects .video-links-row a:hover,
-#led .video-links-row a:hover,
-#line-following .video-links-row a:hover,
-#plc .video-links-row a:hover {
-    background: linear-gradient(135deg, 
-        rgba(0, 90, 156, 0.15) 0%,
-        rgba(240, 248, 255, 0.5) 50%,
-        rgba(0, 90, 156, 0.15) 100%);
-    color: #003d66;
-}
-
-/* Software projects - Purple theme for lists and buttons */
-#software-projects li,
-#mooflixz li,
-#study-app li {
-    background: linear-gradient(135deg, 
-        rgba(142, 68, 173, 0.06) 0%,
-        rgba(248, 240, 255, 0.25) 50%,
-        rgba(142, 68, 173, 0.06) 100%);
-    border-left: 3px solid #8e44ad;
-}
-
-#software-projects .video-links-row a,
-#mooflixz .video-links-row a,
-#study-app .video-links-row a {
-    background: linear-gradient(135deg, 
-        rgba(142, 68, 173, 0.1) 0%,
-        rgba(248, 240, 255, 0.4) 50%,
-        rgba(142, 68, 173, 0.1) 100%);
-    border: 2px solid #8e44ad;
-    color: #8e44ad;
-}
-
-#software-projects .video-links-row a:hover,
-#mooflixz .video-links-row a:hover,
-#study-app .video-links-row a:hover {
-    background: linear-gradient(135deg, 
-        rgba(142, 68, 173, 0.15) 0%,
-        rgba(248, 240, 255, 0.5) 50%,
-        rgba(142, 68, 173, 0.15) 100%);
-    color: #6a3085;
-}
-
-/* Audio projects - Orange theme for lists and buttons */
-#audio-projects li,
-#darrel li,
-#caminandes li {
-    background: linear-gradient(135deg, 
-        rgba(230, 126, 34, 0.06) 0%,
-        rgba(255, 248, 240, 0.25) 50%,
-        rgba(230, 126, 34, 0.06) 100%);
-    border-left: 3px solid #e67e22;
-}
-
-#audio-projects .video-links-row a,
-#darrel .video-links-row a,
-#caminandes .video-links-row a {
-    background: linear-gradient(135deg, 
-        rgba(230, 126, 34, 0.1) 0%,
-        rgba(255, 248, 240, 0.4) 50%,
-        rgba(230, 126, 34, 0.1) 100%);
-    border: 2px solid #e67e22;
-    color: #e67e22;
-}
-
-#audio-projects .video-links-row a:hover,
-#darrel .video-links-row a:hover,
-#caminandes .video-links-row a:hover {
-    background: linear-gradient(135deg, 
-        rgba(230, 126, 34, 0.15) 0%,
-        rgba(255, 248, 240, 0.5) 50%,
-        rgba(230, 126, 34, 0.15) 100%);
-    color: #cc6d1f;
-}
-
-/* Resume section - Dark professional theme */
-#resume .video-links-row a {
-    background: linear-gradient(135deg, 
-        rgba(52, 73, 94, 0.1) 0%,
-        rgba(248, 249, 250, 0.4) 50%,
-        rgba(52, 73, 94, 0.1) 100%);
-    border: 2px solid #34495e;
-    color: #34495e;
-}
-
-#resume .video-links-row a:hover {
-    background: linear-gradient(135deg, 
-        rgba(52, 73, 94, 0.15) 0%,
-        rgba(248, 249, 250, 0.5) 50%,
-        rgba(52, 73, 94, 0.15) 100%);
-    color: #2c3e50;
-}
-
-/* Theme-specific mute button styling */
-/* Software projects - Purple theme for mute buttons */
-#mooflixz .mute-btn {
-    background: linear-gradient(135deg, 
-        rgba(142, 68, 173, 0.1) 0%,
-        rgba(248, 240, 255, 0.4) 50%,
-        rgba(142, 68, 173, 0.1) 100%);
-    border: 2px solid #8e44ad;
-    color: #8e44ad;
-}
-
-#mooflixz .mute-btn:hover {
-    background: linear-gradient(135deg, 
-        rgba(142, 68, 173, 0.15) 0%,
-        rgba(248, 240, 255, 0.5) 50%,
-        rgba(142, 68, 173, 0.15) 100%);
-    color: #6a3085;
-}
-
-#study-app .mute-btn {
-    background: linear-gradient(135deg, 
-        rgba(142, 68, 173, 0.1) 0%,
-        rgba(248, 240, 255, 0.4) 50%,
-        rgba(142, 68, 173, 0.1) 100%);
-    border: 2px solid #8e44ad;
-    color: #8e44ad;
-}
-
-/* Audio projects - Orange theme for mute buttons */
-#darrel .mute-btn,
-#caminandes .mute-btn {
-    background: linear-gradient(135deg, 
-        rgba(230, 126, 34, 0.1) 0%,
-        rgba(255, 248, 240, 0.4) 50%,
-        rgba(230, 126, 34, 0.1) 100%);
-    border: 2px solid #e67e22;
-    color: #e67e22;
-}
-
-#darrel .mute-btn:hover,
-#caminandes .mute-btn:hover {
-    background: linear-gradient(135deg, 
-        rgba(230, 126, 34, 0.15) 0%,
-        rgba(255, 248, 240, 0.5) 50%,
-        rgba(230, 126, 34, 0.15) 100%);
-    color: #cc6d1f;
-}
-
-/* Theme-specific image captions */
-#engineering-projects figcaption,
-#led figcaption,
-#line-following figcaption,
-#plc figcaption {
-    background: linear-gradient(135deg, 
-        rgba(0, 90, 156, 0.08) 0%,
-        rgba(240, 248, 255, 0.35) 50%,
-        rgba(0, 90, 156, 0.08) 100%);
-    border-top: 2px solid #005a9c;
-    color: #005a9c;
-}
-
-#software-projects figcaption,
-#mooflixz figcaption,
-#study-app figcaption {
-    background: linear-gradient(135deg, 
-        rgba(142, 68, 173, 0.08) 0%,
-        rgba(248, 240, 255, 0.35) 50%,
-        rgba(142, 68, 173, 0.08) 100%);
-    border-top: 2px solid #8e44ad;
-    color: #8e44ad;
-}
-
-#audio-projects figcaption,
-#darrel figcaption,
-#caminandes figcaption {
-    background: linear-gradient(135deg, 
-        rgba(230, 126, 34, 0.08) 0%,
-        rgba(255, 248, 240, 0.35) 50%,
-        rgba(230, 126, 34, 0.08) 100%);
-    border-top: 2px solid #e67e22;
-    color: #e67e22;
-}
-
-/* Apply rainbow gradients to all remaining glass elements */
-
-/* Video demo containers - unique colors for each */
-.video-demo {
-    background: linear-gradient(135deg, 
-        rgba(142, 68, 173, 0.08) 0%,
-        rgba(248, 240, 255, 0.35) 50%,
-        rgba(142, 68, 173, 0.08) 100%);
-    border-left: 4px solid #8e44ad;
-}
-
-/* Code containers */
-pre, .code-container, code {
-    background: linear-gradient(135deg, 
-        rgba(52, 73, 94, 0.08) 0%,
-        rgba(248, 249, 250, 0.35) 50%,
-        rgba(52, 73, 94, 0.08) 100%) !important;
-    border-left: 4px solid #34495e !important;
-}
-
-/* Image fullscreen overlay */
-#image-fullscreen-overlay {
-    background: linear-gradient(135deg, 
-        rgba(44, 62, 80, 0.92) 0%,
-        rgba(52, 73, 94, 0.95) 50%,
-        rgba(44, 62, 80, 0.92) 100%);
-}
-
-/* Enhanced h3 headers with unique colors based on section */
-h3 {
-    background: linear-gradient(135deg, 
-        rgba(155, 89, 182, 0.02) 0%,
-        rgba(252, 248, 255, 0.12) 50%,
-        rgba(155, 89, 182, 0.02) 100%);
-    border-left: 4px solid #9b59b6;
-}
-
-/* Enhanced paragraphs with rotating colors */
-p {
-    background: linear-gradient(135deg, 
-        rgba(26, 188, 156, 0.015) 0%,
-        rgba(240, 255, 252, 0.08) 50%,
-        rgba(26, 188, 156, 0.015) 100%);
-    border-left: 3px solid #1abc9c;
-}
-
-/* Alternate paragraph colors for variety */
-p:nth-of-type(even) {
-    background: linear-gradient(135deg, 
-        rgba(241, 196, 15, 0.015) 0%,
-        rgba(255, 253, 235, 0.08) 50%,
-        rgba(241, 196, 15, 0.015) 100%);
-    border-left: 3px solid #f1c40f;
-}
-
-/* Section headings (h2) with bold colors */
-h2 {
-    background: linear-gradient(135deg, 
-        rgba(231, 76, 60, 0.02) 0%,
-        rgba(255, 240, 240, 0.12) 50%,
-        rgba(231, 76, 60, 0.02) 100%);
-    border-left: 4px solid #e74c3c;
-}
-
-/* Main title (h1) with special rainbow gradient */
-h1 {
-    background: linear-gradient(135deg, 
-        rgba(155, 89, 182, 0.025) 0%,
-        rgba(52, 152, 219, 0.02) 20%,
-        rgba(46, 204, 113, 0.02) 40%,
-        rgba(241, 196, 15, 0.02) 60%,
-        rgba(230, 126, 34, 0.02) 80%,
-        rgba(231, 76, 60, 0.025) 100%);
-    border-left: 5px solid #9b59b6;
 }
 
