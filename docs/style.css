@@ -1315,7 +1315,8 @@ pre {
 
 /* Responsive design for achievement badges */
 @media (max-width: 768px) {
-    .achievement-badges {
+    .achievement-badges,
+    .other-achievement-badges {
         grid-template-columns: 1fr;
         gap: 1rem;
     }
@@ -1323,6 +1324,7 @@ pre {
     .badge {
         min-width: unset;
         width: 100%;
+        box-sizing: border-box;
     }
 }
 
@@ -2535,6 +2537,17 @@ pre {
     .other-achievement-badges {
         grid-template-columns: 1fr;
         gap: 1rem;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden;
+    }
+    
+    .achievements-section {
+        width: 100%;
+        box-sizing: border-box;
+        overflow-x: hidden;
     }
     
     .achievement-image img {
