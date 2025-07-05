@@ -2611,16 +2611,23 @@ pre {
     }
     
     .badge-header {
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .badge-content {
+        text-align: center;
     }
 }
 
 /* Ultra-narrow devices (foldable phones, etc.) */
 @media (max-width: 400px) {
     .badge-icon.large {
-        font-size: 2rem;
-        width: 50px;
-        height: 50px;
+        font-size: 1.8rem;
+        width: 45px;
+        height: 45px;
     }
     
     .badge-header {
@@ -2644,19 +2651,14 @@ pre {
 /* Extra narrow devices (Z Fold 5 cover screen, etc.) */
 @media (max-width: 320px) {
     .badge-icon.large {
-        font-size: 1.5rem;
-        width: 40px;
-        height: 40px;
+        font-size: 1.4rem;
+        width: 35px;
+        height: 35px;
+        border-width: 1px;
     }
     
     .badge-header {
         gap: 0.5rem;
-        align-items: flex-start;
-    }
-    
-    .badge-content {
-        min-width: 0;
-        flex: 1;
     }
     
     .badge-content strong {
