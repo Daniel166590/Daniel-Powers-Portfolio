@@ -409,7 +409,6 @@ pre {
     backdrop-filter: blur(18px) saturate(160%);
     -webkit-backdrop-filter: blur(18px) saturate(160%);
     position: relative;
-    z-index: 1;
 }
 
 /* Simplified Mooflixz container - no dynamic sizing */
@@ -1772,6 +1771,10 @@ pre {
     color: #2c3e50;
     line-height: 1.7;
     font-weight: 500;
+    text-align: left;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
 }
 
 .main-content li:hover {
@@ -1807,6 +1810,7 @@ pre {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    white-space: nowrap; /* Prevent awkward line breaks within strong tags */
 }
 
 /* Special styling for first word/phrase in each list item */
@@ -1817,25 +1821,24 @@ pre {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     position: relative;
-    margin-right: 0.5rem;
+    margin-right: 0.4rem; /* Consistent spacing after action verbs */
 }
 
-.main-content li strong:first-child::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: linear-gradient(90deg, #005a9c, #27ae60);
-    opacity: 0;
-    transform: scaleX(0);
-    transition: all 0.3s ease;
+/* Ensure consistent spacing for inline strong elements */
+.main-content li strong:not(:first-child) {
+    margin-left: 0.1rem;
+    margin-right: 0.1rem;
 }
 
-.main-content li:hover strong:first-child::after {
-    opacity: 1;
-    transform: scaleX(1);
+/* Prevent orphaned conjunctions and prepositions */
+.main-content li {
+    text-wrap: pretty; /* Modern browsers */
+    hanging-punctuation: first last; /* Better punctuation handling */
+}
+
+/* Ensure consistent line height for readability */
+.main-content li {
+    text-rendering: optimizeLegibility;
 }
 
 /* ====== ACHIEVEMENT METRICS HIGHLIGHTING ====== */
@@ -2509,7 +2512,7 @@ pre {
 .image-caption {
     margin-top: 0.5rem;
     font-size: 0.85rem;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(12, 12, 12, 0.8);
     text-align: center;
     font-style: italic;
 }
