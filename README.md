@@ -7,7 +7,7 @@
 
 A modern, responsive portfolio website showcasing my journey as a Computer Science undergraduate at MTSU with minors in Engineering Technology and Audio Production. The site features my embedded systems projects, software development work, and academic achievements.
 
-## 🌟 Features
+## Features
 
 - **Responsive Design** - Seamless experience across desktop, tablet, and mobile devices
 - **Modern UI/UX** - Glassmorphism design with smooth animations and transitions
@@ -16,14 +16,14 @@ A modern, responsive portfolio website showcasing my journey as a Computer Scien
 - **Accessibility** - Screen reader friendly with proper semantic markup
 - **Performance Optimized** - Optimized for fast loading and smooth scrolling
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - **Frontend**: HTML5, CSS3, Vanilla JavaScript
 - **Design**: Glassmorphism, CSS Grid, Flexbox
 - **Performance**: Intersection Observer API, Lazy Loading, Progressive Enhancement
 - **Media**: Video optimization, responsive images, custom media controls
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 docs/
@@ -35,7 +35,7 @@ docs/
 └── AdditionalInformation/  # Resume, CV, and other documents
 ```
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Local Development
 
@@ -61,7 +61,7 @@ docs/
 The portfolio is deployed using GitHub Pages and accessible at:
 **[https://daniel166590.github.io/Daniel-Powers-Portfolio/](https://daniel166590.github.io/Daniel-Powers-Portfolio/)**
 
-## 📱 Responsive Design
+## Responsive Design
 
 The portfolio features a fully responsive design that adapts to different screen sizes:
 
@@ -69,35 +69,35 @@ The portfolio features a fully responsive design that adapts to different screen
 - **Tablet (768px-1199px)**: Collapsible navigation with optimized spacing
 - **Mobile (320px-767px)**: Hamburger menu with touch-friendly interactions
 
-## ⚡ Performance Features
+## Performance Features
 
 - **Lazy Loading**: Videos load progressively based on viewport intersection
 - **Optimized Scrolling**: Velocity-based scroll performance with smooth animations
 - **Efficient Media**: Compressed videos with poster frames for faster initial loads
 - **Integrated Codebase**: Currently using consolidated files for stability and quick deployment
 
-## 🎯 Key Sections
+## Key Sections
 
 - **Engineering Projects**: LED driver optimization, robotics, PLC systems
 - **Software Development**: Full-stack web applications, database management
 - **Audio Production**: Sound design, mixing, and audio engineering work
 - **Academic Achievements**: Coursework, leadership, and recognitions
 
-## 🔧 Recent Updates
+## Recent Updates
 
 - **Launch-Ready Optimization**: Prioritized stability and quick deployment with consolidated codebase
 - **Performance Optimization**: Implemented advanced scroll and video performance features
 - **Enhanced UX**: Added smooth animations and improved navigation patterns
 - **Mobile Optimization**: Refined responsive design for better mobile experience
 
-## 🛣️ Future Development Goals
+## Future Development Goals
 
 - **Code Modularization**: Plan to separate CSS and JavaScript into focused, maintainable modules
 - **Enhanced Performance**: Further optimize loading times and interactions
 - **Accessibility Improvements**: Expand screen reader support and keyboard navigation
 - **Additional Features**: Explore new interactive elements and animations
 
-## 📄 Development Process
+## Development Process
 
 This portfolio was developed using modern web development practices:
 
@@ -107,7 +107,7 @@ This portfolio was developed using modern web development practices:
 4. **Stability Priority**: Chose consolidated codebase for reliable deployment and launch
 5. **Cross-Browser Testing**: Verified compatibility across major browsers
 
-## 📊 Technical Highlights
+## Technical Highlights
 
 ### Current Architecture
 - **Consolidated Codebase**: Single HTML file with integrated JavaScript for stability
@@ -128,7 +128,7 @@ This portfolio was developed using modern web development practices:
 - **Debounced Scrolling**: Optimized scroll event handling
 - **Integrated Loading**: Streamlined file structure for faster initial load
 
-## 🎨 Design Philosophy
+## Design Philosophy
 
 The portfolio embodies a **glassmorphism** aesthetic with:
 - Semi-transparent panels with backdrop blur effects
@@ -137,7 +137,7 @@ The portfolio embodies a **glassmorphism** aesthetic with:
 - Clean typography hierarchy
 - Optimized contrast for accessibility
 
-## 📞 Contact
+## Contact
 
 **Daniel Powers**  
 Computer Science Undergraduate | MTSU  
@@ -149,11 +149,11 @@ For detailed contact information and to get in touch, please visit my [portfolio
 
 ---
 
-## 📄 License
+## License
 
 This project is open source and available under the [MIT License](LICENSE).
 
-## 🤝 Contributing
+## Contributing
 
 While this is a personal portfolio, I welcome feedback and suggestions! Feel free to:
 
