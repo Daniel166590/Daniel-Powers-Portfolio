@@ -54,6 +54,10 @@ docs/
    cd docs
    python -m http.server 8000
    # Navigate to http://localhost:8000
+   
+   # Alternative: Use VS Code Live Server extension
+   # Open project in VS Code, install Live Server extension,
+   # then click "Go Live" button for instant local development
    ```
 
 ### Live Deployment
