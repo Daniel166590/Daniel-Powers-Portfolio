@@ -45,16 +45,11 @@ docs/
    cd Daniel-Powers-Portfolio
    ```
 
-2. **Open locally**
-   ```bash
-   # Open index.html in your browser
-   open docs/index.html
-   
-   # Or use a local server (recommended)
-   cd docs
-   python -m http.server 8000
-   # Navigate to http://localhost:8000
-   ```
+2. **Open in Visual Studio Code**
+   - Open the project folder in Visual Studio Code
+   - If you don't have the Live Server extension installed, install it from the VS Code marketplace
+   - Click the "Go Live" button in the bottom right of VS Code to launch the site locally
+   - This will automatically open the portfolio in your default browser
 
 ### Live Deployment
 
